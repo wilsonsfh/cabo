@@ -1,0 +1,8 @@
+Two actual browser peers
+{
+  "passed": true,
+  "checks": 22,
+  "errors": [],
+  "failure": null,
+  "screenshots": 0
+}

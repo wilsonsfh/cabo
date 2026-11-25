@@ -1,0 +1,13 @@
+[1125/211336.634168:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /Users/WilsonSoon/Library/Application Support/Google/Chrome/Crashpad/settings.dat: Operation not permitted (1)
+[1125/211336.634478:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /Users/WilsonSoon/Library/Application Support/Google/Chrome/Crashpad/settings.dat: Operation not permitted (1)
+[57044:4921035:1125/211336.730232:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /Users/WilsonSoon/Library/Application Support/Google/Chrome/Crashpad/settings.dat: Operation not permitted (1)
+[57044:4921053:1125/211337.189825:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[57044:4921164:1125/211337.194626:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[57044:4921053:1125/211337.199612:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[57044:4921164:1125/211337.200895:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[57044:4921053:1125/211337.205046:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[57044:4921164:1125/211337.205700:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+Trying to load the allocator multiple times. This is *not* supported.
+[1125/211337.399667:WARNING:third_party/crashpad/crashpad/util/process/process_memory_mac.cc:94] mach_vm_read(0x16fdb0000, 0x8000): (os/kern) invalid address (1)
+[1125/211337.754162:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:208] open /Users/WilsonSoon/Library/Application Support/Google/Chrome/Crashpad/settings.dat: Operation not permitted (1)
+[1125/211337.755035:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:153] open /Users/WilsonSoon/Library/Application Support/Google/Chrome/Crashpad/new/70c61b7b-908c-4fb6-ab7a-29548235c8f6.dmp: Operation not permitted (1)

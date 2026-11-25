@@ -1,0 +1,14 @@
+Responsive 390 light
+Responsive 390 dark
+Responsive 820 light
+Responsive 820 dark
+Responsive 1440 light
+Responsive 1440 dark
+Two actual browser peers
+{
+  "passed": true,
+  "checks": 75,
+  "errors": [],
+  "failure": null,
+  "screenshots": 18
+}

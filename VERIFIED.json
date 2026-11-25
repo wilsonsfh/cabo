@@ -1,0 +1,106 @@
+{
+  "item": "q2",
+  "status": "wilson_2359_rules_correction_verified",
+  "verified_at": "2026-11-26T00:08:00+08:00",
+  "summary": "Wilson’s two answered assumptions are implemented: drawn-power discard opens an authoritative 2.5-second stacking window; no stack starts the discarder’s power, while a same-rank stack cancels it and makes the stacker the private power actor. Eligible wrong-rank stacks reject with one extra hidden deck card; late/ineligible/self/stale attempts reject without penalty. Original turn/final-turn accounting, Kings, deck-only draws, exchanges, calls and scores are preserved.",
+  "window_rule": {
+    "duration_ms": 2500,
+    "authority": "Server clock for online; local authority clock for solo",
+    "open": "Power discarded from just-drawn deck card enters phase stacking with pendingPower and power null",
+    "eligibility": "Other player of latest discard and now strictly before deadline",
+    "no_stack": "advanceTime(state, now) starts discarder power at or after deadline",
+    "successful_stack": "Cancels pending discarder power; stacker immediately performs same power; window closes",
+    "late_stack": "STACK_WINDOW rejection, no penalty",
+    "testability": "reduce accepts injected millisecond now; advanceTime accepts injected now; unit window tests use no timers",
+    "reason": "Single deadline phase is smaller than two-player consent/pass coordination and avoids consent deadlocks",
+    "duration_confirmed_by_wilson": false
+  },
+  "tests": [
+    "Full Node run: node --test tests/engine.test.mjs tests/boundaries.test.mjs; 44/44 pass, zero failures/skips; includes 1,000-game simulation. Duration 245045.112395ms.",
+    "Final-source non-simulation run: node --test --test-skip-pattern='1,000' tests/engine.test.mjs tests/boundaries.test.mjs tests/stack-boundaries.test.mjs; 48/48 selected cases pass, zero failures. Union with simulation: 49 distinct cases (38 engine including simulation, 6 artwork/network boundaries, 5 additional stack boundaries).",
+    "1,000 seeded Classic bot games completed: 473561 reducer/clock transitions, 8910 Queen decisions, 8420 Jack swaps, 12434 stacks. Every state checks card conservation and every filtered player view is leak-checked. Counts include injected deadline transitions, not only submitted player actions.",
+    "Actual two-client WebSocket integration: 16/16 checks, four rounds, six successful stacks, one rejected wrong-rank stack. Generic stacker error and public hand-size change; penalty faces hidden. Filtered authority equality, stale rejection, reconnect/rematch and forfeit pass.",
+    "Focused Python Playwright Chromium: 17/17 checks, two independent network clients, Queen-stack transfer, hidden penalty, cancellation/won-power messages, stacker-only private pair, original turn accounting, overflow and celebration replay. Zero page errors and zero console errors. Two stack-moment screenshots refreshed.",
+    "Solo Python Playwright smoke: 7/7 checks, private initial peek/hide and complete solo round; no page errors or horizontal overflow.",
+    "npm run check: six Node module syntax checks pass. smoke.py and stack-browser.py compile. Browser QA used exclusive flock -x -w 120 /tmp/chrome.lock, /usr/bin/chromium --no-sandbox and port 5818, never MCP browser. Temporary servers closed and port 5818 confirmed unbound.",
+    "Final-source boundary tests additionally cover own ineligible wrong attempt, penalty consuming the last card, empty deck rejection metadata, ordinary replacement power interruption, and caller stealing a final-turn Queen without losing final-turn accounting."
+  ],
+  "suite_counts": {
+    "distinct_node_cases": { "passed": 49, "failed": 0 },
+    "full_node_run": { "passed": 44, "failed": 0, "skipped": 0 },
+    "final_fast_run": { "passed": 48, "failed": 0 },
+    "engine": { "passed": 38, "failed": 0 },
+    "boundary_svg_network": { "passed": 6, "failed": 0 },
+    "additional_stack_boundaries": { "passed": 5, "failed": 0 },
+    "simulation": { "games": 1000, "transitions": 473561, "queen_decisions": 8910, "jack_swaps": 8420, "stacks": 12434 },
+    "websocket_integration": { "passed": 16, "failed": 0, "rounds": 4, "stacks": 6, "rejected_stacks": 1 },
+    "chromium_focused": { "passed": 17, "failed": 0, "page_errors": 0, "console_errors": 0 },
+    "chromium_solo_smoke": { "passed": 7, "failed": 0 },
+    "node_syntax": { "passed": 6, "failed": 0 },
+    "python_compile": { "passed": 2, "failed": 0 }
+  },
+  "evidence": [
+    "tests/evidence/stack-node-results.txt",
+    "tests/evidence/stack-final-fast-results.txt",
+    "tests/evidence/stack-focused-unit.txt",
+    "tests/evidence/stack-integration-results.txt",
+    "tests/evidence/stack-browser-report.json",
+    "tests/evidence/stack-browser-results.txt",
+    "tests/evidence/stack-smoke-results.txt",
+    "tests/evidence/rules-smoke.json",
+    "tests/evidence/stack-syntax-results.txt",
+    "tests/evidence/stack-source-hashes.txt",
+    "tests/evidence/stack-environment-hashes.txt"
+  ],
+  "screenshots": [
+    "shots/stack-desktop-light.png",
+    "shots/stack-mobile-dark.png"
+  ],
+  "coordinator_assumptions": [],
+  "answered_by_wilson": [
+    "A same-rank power stack cancels discarder power and makes the stacker the acting power player with identical mandatory/optional and private-view rules.",
+    "A wrong-rank eligible stack is rejected with one additional unseen deck card."
+  ],
+  "provisional_choices_and_open_questions": [
+    "Self-stacking by the latest discarder remains rejected without penalty; Wilson confirmation pending.",
+    "The fixed 2500ms power window and retained ordinary placement-to-next-draw window need confirmation, including final-action timing.",
+    "Non-power alternating chains remain allowed. A power transfer starts immediately and closes stacking; whether alternating power chains should be supported remains unanswered."
+  ],
+  "preserved": [
+    "client/environment.mjs and client/env.css are untouched; SHA-256 checks pass.",
+    "Original card artwork, hand-drawn style and environment are intact.",
+    "?demo=celebrate still renders a genuine completed simulated match; only its finite replay driver advances the new deadline phase.",
+    "Deck-only draws; discard pile never drawn; red King -1 and black King 13 remain non-powers.",
+    "Jack mandatory blind swap, Queen mandatory look then optional swap, 7/8 own peek and 9/10 opponent peek keep privacy and skip rules.",
+    "Scoring, call rules, exchanges, Quick/Classic, reconnect and chat remain unchanged."
+  ],
+  "verification_notes": [
+    "First socket attempt exposed a time-dependent remainingMs view field; it was replaced with stable deadline/windowMs metadata before the successful run.",
+    "Socket bot driver was synchronized with timer revisions after an initial harness race; final WebSocket run passed.",
+    "Initial focused browser harness wait used CSP-disallowed string evaluation; replaced with the existing evaluate/poll pattern. Successful rerun has zero console/page errors; production CSP was not weakened.",
+    "An earlier redundant unit simulation was stopped; only the completed 1,000-game run is claimed.",
+    "The final-source fast run covers the later exhaustion-rejection metadata fix; the completed bot simulation never attempts wrong ranks, so its behavior is unaffected by that reporting-only branch."
+  ],
+  "not_rerun": [
+    "Historical browser.py/polish.py broad restyle and three-width matrix; current browser entry points route to stack-browser.py.",
+    "Physical-device Safari, hostile-host security audit or public deployment."
+  ],
+  "limitations": [
+    "Authority knows the deck; solo authority is inspectable. Seeded shuffling is not cryptographic fairness.",
+    "Rooms/chat are RAM-only and not end-to-end encrypted; prior in-memory rule states do not migrate.",
+    "Current deadlines are absolute server/local authority times; countdown display is advisory, while authoritative timestamp checks decide eligibility.",
+    "Historical 23:10/23:17 evidence and reports do not verify this correction."
+  ],
+  "output_paths": [
+    "/home/ubuntu/AI-round/analysis/p2-prototype",
+    "/home/ubuntu/AI-round/analysis/p2-prototype/RULES.md",
+    "/home/ubuntu/AI-round/analysis/p2-prototype/RULES-CHANGELOG.md",
+    "/home/ubuntu/AI-round/analysis/p2-prototype/VERIFIED.json",
+    "/home/ubuntu/AI-round/analysis/p2-prototype/shots/stack-desktop-light.png",
+    "/home/ubuntu/AI-round/analysis/p2-prototype/shots/stack-mobile-dark.png"
+  ],
+  "blockers": [],
+  "restart_note": "The Mac server on :4812 MUST be restarted after sync; existing RAM-only matches do not migrate.",
+  "start_command": "cd analysis/p2-prototype && HOST=127.0.0.1 PORT=4812 node server.mjs",
+  "ready_for_sync": true
+}

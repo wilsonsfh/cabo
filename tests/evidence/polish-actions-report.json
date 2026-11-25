@@ -1,0 +1,31 @@
+{
+  "checks": [
+    "Hub hover dims only the competing lobby action",
+    "Hub word highlight reveals on hover",
+    "primary lobby targets are at least 56px high",
+    "Queen reveals exactly the selected own and opponent pair",
+    "Queen has both explicit decisions",
+    "Queen decline ends the turn without a swap event",
+    "Jack mandatory UI has no skip",
+    "Jack selection immediately swaps with no reveal stage",
+    "multi-card selection has one primary action",
+    "failed three-card match creates six-card hand",
+    "wide hand scrolls without shrinking cards",
+    "wide hand does not overflow page",
+    "reduced motion has no running card animations",
+    "no page errors"
+  ],
+  "errors": [],
+  "shots": [
+    "restyle-hub-hover.png",
+    "restyle-queen-private-choice.png",
+    "restyle-jack-mandatory.png",
+    "restyle-penalty-hand-mobile.png"
+  ],
+  "seeds": {
+    "penalty": 7,
+    "Q": 32,
+    "J": 52
+  },
+  "passed": true
+}

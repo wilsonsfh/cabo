@@ -1,0 +1,11 @@
+Final layout 390 light
+Final layout 390 dark
+Final layout 820 light
+Final layout 820 dark
+Final layout 1440 light
+Final layout 1440 dark
+{
+  "passed": true,
+  "checks": 37,
+  "failure": null
+}

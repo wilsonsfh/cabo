@@ -1,0 +1,22 @@
+{
+  "product": "Cabo",
+  "formerly": "LOWKEY",
+  "featureReadyAt": "2026-11-25T23:25:00+08:00",
+  "completedAt": "2026-11-25T23:47:00+08:00",
+  "environment": "seeded hand-drawn wide/pocket SVG, day/dusk, one rain compositor sheet, call/end mood, reduced motion and visibility pause",
+  "celebrationReplay": "/?demo=celebrate",
+  "celebrationSeededReplay": "/?demo=celebrate&seed=2252",
+  "captureReadySelector": "body[data-celebration-ready=\"true\"]",
+  "recommendedCaptureDelayMs": 700,
+  "settleAfterMs": 4000,
+  "debugOverlay": false,
+  "sourceOwned": ["client/environment.mjs", "client/env.css", "client/scene.mjs", "client/cards.mjs", "client/style.css", "RESTYLE-CHANGELOG.md"],
+  "indexException": "Only title/wordmark/accessibility name changed as permitted by lead",
+  "leadMetadataFollowup": "client/index.html meta description retains LOWKEY because index scope was title/wordmark only",
+  "verification": {"nodeTestsPassed":42,"nodeTestsFailed":0,"responsiveAssertionsPassed":136,"existingSmokeChecksPassed":7,"refreshedCaptureCount":24,"pageErrors":0,"consoleErrors":0,"cspViolations":0,"externalRequests":0,"all52FaceFooterMarks":26,"footerPlacementFailures":0},
+  "animationBudget": {"totalSceneDescendants":276,"ambientMotionClassNodes":10,"activeDesktopAmbientAnimations":8,"transientConfettiPaths":26},
+  "finalSoftwareCadence": {"samplesEach":240,"staticMeanMs":16.665991666666667,"staticP95Ms":16.700000000000728,"staticOver25Ms":0,"animatedMeanMs":16.73514166666667,"animatedP95Ms":16.799999999999272,"animatedOver25Ms":1,"animatedMaxMs":33.29999999999927},
+  "limitations": "Sandbox headless/software rendered only; occasional delayed frames occurred across samples; no native GPU/no-frame-drop/physical device/Safari/sustained gameplay certification. Current PaperTable is DOM/WAAPI, Three.js/GSAP vendors are not loaded. Full two-peer browser suite not rerun here.",
+  "ownedServersStopped": true,
+  "evidence": ["shots/environment-checks.json", "shots/environment-motion-cadence.json", "_env-node-tests.txt", "_env-smoke-final.log", "_env-verify-final.log", "_ref/environment-video-notes.md"]
+}

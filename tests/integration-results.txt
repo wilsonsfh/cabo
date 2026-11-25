@@ -1,0 +1,2 @@
+Call It listening at http://127.0.0.1:61403
+PASS: two WebSocket clients completed a four-round match in 203 actions; all wire views equal their filtered authority view, no secret identities, rematch, stale input rejection, pause/resume, invalid token and forfeit verified.

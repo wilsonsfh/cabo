@@ -1,0 +1,42 @@
+[
+  {
+    "mode": "light",
+    "foreground": "ink",
+    "ratio": 11.54
+  },
+  {
+    "mode": "light",
+    "foreground": "muted",
+    "ratio": 4.83
+  },
+  {
+    "mode": "light",
+    "foreground": "accent",
+    "ratio": 7.35
+  },
+  {
+    "mode": "light",
+    "foreground": "red",
+    "ratio": 5.38
+  },
+  {
+    "mode": "dark",
+    "foreground": "ink",
+    "ratio": 12.63
+  },
+  {
+    "mode": "dark",
+    "foreground": "muted",
+    "ratio": 8.15
+  },
+  {
+    "mode": "dark",
+    "foreground": "accent",
+    "ratio": 8.52
+  },
+  {
+    "mode": "dark",
+    "foreground": "red",
+    "ratio": 6.28
+  }
+]

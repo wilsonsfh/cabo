@@ -1,0 +1,1 @@
+2026-11-25 +08 — Updated DESIGN-RATIONALE.md and TECHNICAL-BREAKDOWN.md in place for Cabo's final rules, DOM/SVG/WAAPI environment/celebration, rename/directives/resources/process, current owner-reported tests and honest limits; no tests rerun or product files edited.

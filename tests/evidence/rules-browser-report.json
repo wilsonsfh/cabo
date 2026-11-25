@@ -1,0 +1,64 @@
+{
+  "checks": [
+    "p0 sees only own initial two cards",
+    "p1 sees only own initial two cards",
+    "real chat delivered and escaped",
+    "chat does not create markup",
+    "discard pile cannot be clicked to draw",
+    "no Take discard draw button",
+    "one discard action names the automatic power",
+    "triggered Jack has no skip button",
+    "eligible stack state clearly labelled",
+    "own cards offer labelled stack action",
+    "Queen presents explicit swap and keep controls",
+    "Queen has no skip control",
+    "two browsers finish four real rounds",
+    "both peers agree on result and totals",
+    "reduced-motion peer reaches the same outcome",
+    "mobile visible buttons meet 52px minimum",
+    "mobile has no horizontal overflow",
+    "unanimous rematch deals new cards",
+    "browser reload and seat-token reconnect works",
+    "keyboard-only initial peek and ready works for both seats",
+    "no page errors",
+    "no console errors"
+  ],
+  "screenshots": [],
+  "errors": [],
+  "consoleErrors": [],
+  "responsive": [],
+  "powersSeen": [
+    "blindSwap",
+    "spy",
+    "lookSwap",
+    "peek"
+  ],
+  "network": {
+    "room": "A1F7B5",
+    "actions": 132,
+    "rounds": 4,
+    "stacks": 4,
+    "sharedResult": {
+      "sums": {
+        "p0": 12,
+        "p1": 23
+      },
+      "points": {
+        "p0": 0,
+        "p1": 23
+      },
+      "caller": "p0",
+      "successfulCall": true,
+      "round": 4,
+      "reason": "call",
+      "totals": {
+        "p0": 5,
+        "p1": 71
+      }
+    },
+    "reducedMotion": true,
+    "rematch": true,
+    "reconnect": true
+  },
+  "passed": true
+}

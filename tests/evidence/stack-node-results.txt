@@ -1,0 +1,276 @@
+TAP version 13
+# LOWKEY listening at http://127.0.0.1:33717
+# Subtest: standard deck artwork: every visible face has mirrored rank indices and no undefined content
+ok 1 - standard deck artwork: every visible face has mirrored rank indices and no undefined content
+  ---
+  duration_ms: 15.235735
+  type: 'test'
+  ...
+# Subtest: hidden artwork never renders a rank even if extra secret fields are accidentally passed
+ok 2 - hidden artwork never renders a rank even if extra secret fields are accidentally passed
+  ---
+  duration_ms: 0.778038
+  type: 'test'
+  ...
+# Subtest: strict script CSP and zero-install static assets are served locally
+ok 3 - strict script CSP and zero-install static assets are served locally
+  ---
+  duration_ms: 36.127808
+  type: 'test'
+  ...
+# Subtest: Host, method and private-file boundaries reject
+ok 4 - Host, method and private-file boundaries reject
+  ---
+  duration_ms: 11.227213
+  type: 'test'
+  ...
+# Subtest: cross-origin WebSocket upgrade rejects
+ok 5 - cross-origin WebSocket upgrade rejects
+  ---
+  duration_ms: 5.9003
+  type: 'test'
+  ...
+# Subtest: chat is authenticated by room seat, bounded, rate-limited and does not advance the game revision
+ok 6 - chat is authenticated by room seat, bounded, rate-limited and does not advance the game revision
+  ---
+  duration_ms: 41.150044
+  type: 'test'
+  ...
+# {"games":1000,"actions":473561,"queenDecisions":8910,"jackSwaps":8420,"stacks":12434}
+# Subtest: exact 52-card suited deck: 13 unique ranks per suit, opaque UUIDs, no jokers or zeros
+ok 7 - exact 52-card suited deck: 13 unique ranks per suit, opaque UUIDs, no jokers or zeros
+  ---
+  duration_ms: 11.057385
+  type: 'test'
+  ...
+# Subtest: seeded deals are reproducible apart from intentionally random opaque identity; reducers are immutable
+ok 8 - seeded deals are reproducible apart from intentionally random opaque identity; reducers are immutable
+  ---
+  duration_ms: 3.359357
+  type: 'test'
+  ...
+# Subtest: Ace, number cards, Jack, Queen, red and black King scoring
+ok 9 - Ace, number cards, Jack, Queen, red and black King scoring
+  ---
+  duration_ms: 1.746323
+  type: 'test'
+  ...
+# Subtest: initial peek exactly two once; hides on readiness; all private fields filtered
+ok 10 - initial peek exactly two once; hides on readiness; all private fields filtered
+  ---
+  duration_ms: 3.717693
+  type: 'test'
+  ...
+# Subtest: typed rejection: illegal phases, other-player moves, injected state and unknown actions
+ok 11 - typed rejection: illegal phases, other-player moves, injected state and unknown actions
+  ---
+  duration_ms: 1.771395
+  type: 'test'
+  ...
+# Subtest: only deck draws exist; every power rank exchanged into the hand stays hidden without power
+ok 12 - only deck draws exist; every power rank exchanged into the hand stays hidden without power
+  ---
+  duration_ms: 10.166729
+  type: 'test'
+  ...
+# Subtest: matching score values collapse into first selected slot, keeping spatial memory
+ok 13 - matching score values collapse into first selected slot, keeping spatial memory
+  ---
+  duration_ms: 1.333075
+  type: 'test'
+  ...
+# Subtest: failed 2-card exchange exposes selection and adds correct penalties
+ok 14 - failed 2-card exchange exposes selection and adds correct penalties
+  ---
+  duration_ms: 1.356692
+  type: 'test'
+  ...
+# Subtest: failed 3-card exchange exposes selection and adds correct penalties
+ok 15 - failed 3-card exchange exposes selection and adds correct penalties
+  ---
+  duration_ms: 1.475383
+  type: 'test'
+  ...
+# Subtest: failed 4-card exchange exposes selection and adds correct penalties
+ok 16 - failed 4-card exchange exposes selection and adds correct penalties
+  ---
+  duration_ms: 1.572345
+  type: 'test'
+  ...
+# Subtest: 7: private own peek, explicit hide
+ok 17 - 7: private own peek, explicit hide
+  ---
+  duration_ms: 2.332893
+  type: 'test'
+  ...
+# Subtest: 8: private own peek, explicit hide
+ok 18 - 8: private own peek, explicit hide
+  ---
+  duration_ms: 1.975585
+  type: 'test'
+  ...
+# Subtest: 9: private opponent peek, explicit hide
+ok 19 - 9: private opponent peek, explicit hide
+  ---
+  duration_ms: 2.612861
+  type: 'test'
+  ...
+# Subtest: 10: private opponent peek, explicit hide
+ok 20 - 10: private opponent peek, explicit hide
+  ---
+  duration_ms: 1.948831
+  type: 'test'
+  ...
+# Subtest: Jack discard automatically starts mandatory blind swap and does not reveal
+ok 21 - Jack discard automatically starts mandatory blind swap and does not reveal
+  ---
+  duration_ms: 2.414724
+  type: 'test'
+  ...
+# Subtest: Jack may skip only when no legal target pair exists
+ok 22 - Jack may skip only when no legal target pair exists
+  ---
+  duration_ms: 1.362806
+  type: 'test'
+  ...
+# Subtest: Queen privately looks at both cards then explicit swapDecision true
+ok 23 - Queen privately looks at both cards then explicit swapDecision true
+  ---
+  duration_ms: 2.554214
+  type: 'test'
+  ...
+# Subtest: Queen privately looks at both cards then explicit swapDecision false
+ok 24 - Queen privately looks at both cards then explicit swapDecision false
+  ---
+  duration_ms: 3.306254
+  type: 'test'
+  ...
+# Subtest: Queen cannot inspect more cards by retargeting or decide before looking
+ok 25 - Queen cannot inspect more cards by retargeting or decide before looking
+  ---
+  duration_ms: 3.294526
+  type: 'test'
+  ...
+# Subtest: swaps preserve public face orientation, including the caller as a legal target
+ok 26 - swaps preserve public face orientation, including the caller as a legal target
+  ---
+  duration_ms: 3.678304
+  type: 'test'
+  ...
+# Subtest: no powers for A–6 or Kings; face-up peeks reject; peek skip remains legal
+ok 27 - no powers for A–6 or Kings; face-up peeks reject; peek skip remains legal
+  ---
+  duration_ms: 3.692876
+  type: 'test'
+  ...
+# Subtest: last deck draw and Queen decision resolve before deck exhaustion scoring
+ok 28 - last deck draw and Queen decision resolve before deck exhaustion scoring
+  ---
+  duration_ms: 1.627774
+  type: 'test'
+  ...
+# Subtest: call scoring remains: tied lowest zero, unsuccessful sum+10, others sum; no Kamikaze
+ok 29 - call scoring remains: tied lowest zero, unsuccessful sum+10, others sum; no Kamikaze
+  ---
+  duration_ms: 1.201543
+  type: 'test'
+  ...
+# Subtest: classic exact-100 reset only once; >100 ends; both players consent before a new deal
+ok 30 - classic exact-100 reset only once; >100 ends; both players consent before a new deal
+  ---
+  duration_ms: 5.404481
+  type: 'test'
+  ...
+# Subtest: Quick profile never resets 100, never ends early, ends at configured round count
+ok 31 - Quick profile never resets 100, never ends early, ends at configured round count
+  ---
+  duration_ms: 5.368308
+  type: 'test'
+  ...
+# Subtest: malformed targets/actions reject as RuleError without mutating state
+ok 32 - malformed targets/actions reject as RuleError without mutating state
+  ---
+  duration_ms: 1.775788
+  type: 'test'
+  ...
+# Subtest: 1,000 seeded bot-vs-bot Classic games terminate legally; every hidden view leak-checked
+ok 33 - 1,000 seeded bot-vs-bot Classic games terminate legally; every hidden view leak-checked
+  ---
+  duration_ms: 244751.011254
+  type: 'test'
+  ...
+# Subtest: stack success reveals same rank, creates a hole, preserves turn and 52 cards; hidden views leak nothing
+ok 34 - stack success reveals same rank, creates a hole, preserves turn and 52 cards; hidden views leak nothing
+  ---
+  duration_ms: 1.882901
+  type: 'test'
+  ...
+# Subtest: wrong rank rejects the stack, adds one hidden deck card, preserves discard/turn/power state
+ok 35 - wrong rank rejects the stack, adds one hidden deck card, preserves discard/turn/power state
+  ---
+  duration_ms: 2.715122
+  type: 'test'
+  ...
+# Subtest: discarder cannot stack own match; occupied own slot required; no initial or empty-pile stack
+ok 36 - discarder cannot stack own match; occupied own slot required; no initial or empty-pile stack
+  ---
+  duration_ms: 2.279523
+  type: 'test'
+  ...
+# Subtest: drawn power starts only after the injected 2500ms deadline; late stack has no penalty
+ok 37 - drawn power starts only after the injected 2500ms deadline; late stack has no penalty
+  ---
+  duration_ms: 7.61895
+  type: 'test'
+  ...
+# Subtest: same-rank stack cancels discarder power; stacker acts with mandatory/privacy rules and original turn accounting
+ok 38 - same-rank stack cancels discarder power; stacker acts with mandatory/privacy rules and original turn accounting
+  ---
+  duration_ms: 9.346742
+  type: 'test'
+  ...
+# Subtest: stacker own repeated attempt is ineligible with no penalty; non-power alternating chains retain holes
+ok 39 - stacker own repeated attempt is ineligible with no penalty; non-power alternating chains retain holes
+  ---
+  duration_ms: 1.578806
+  type: 'test'
+  ...
+# Subtest: wrong-stack penalty with empty deck follows existing exhaustion: pending power resolves first, no reshuffle
+ok 40 - wrong-stack penalty with empty deck follows existing exhaustion: pending power resolves first, no reshuffle
+  ---
+  duration_ms: 2.837276
+  type: 'test'
+  ...
+# Subtest: rank not score matching allows red King onto black King; exchange retains score-value semantics
+ok 41 - rank not score matching allows red King onto black King; exchange retains score-value semantics
+  ---
+  duration_ms: 2.164624
+  type: 'test'
+  ...
+# Subtest: next active draw closes stack window; replacement opens a fresh one; server order wins
+ok 42 - next active draw closes stack window; replacement opens a fresh one; server order wins
+  ---
+  duration_ms: 1.476139
+  type: 'test'
+  ...
+# Subtest: stacking never alters final-turn accounting or scoring/end conditions
+ok 43 - stacking never alters final-turn accounting or scoring/end conditions
+  ---
+  duration_ms: 1.62696
+  type: 'test'
+  ...
+# Subtest: memory bot stacks only learned ranks, remembers exchanged draws, and never probes unknown cards
+ok 44 - memory bot stacks only learned ranks, remembers exchanged draws, and never probes unknown cards
+  ---
+  duration_ms: 2.330144
+  type: 'test'
+  ...
+1..44
+# tests 44
+# suites 0
+# pass 44
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 245045.112395

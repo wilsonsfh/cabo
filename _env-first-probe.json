@@ -1,0 +1,14 @@
+{
+  "errors": [],
+  "console": [],
+  "requests": [],
+  "envNodes": 258,
+  "motionNodes": 11,
+  "environment": {
+    "height": 1069,
+    "width": 1440,
+    "mood": "calm",
+    "theme": "light",
+    "z": "0"
+  }
+}

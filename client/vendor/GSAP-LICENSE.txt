@@ -1,0 +1,5 @@
+GSAP 3.15.1
+Copyright 2026, GreenSock. All rights reserved.
+Subject to the Standard 'no charge' license at https://gsap.com/standard-license.
+The upstream distributed notice is retained verbatim in gsap.min.js.
+This is not represented as an MIT-licensed dependency.

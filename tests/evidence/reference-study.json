@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://www.inspora.design/websites",
+    "title": "Websites \u2014 Inspora",
+    "screenshot": "shots/reference-inspora.png",
+    "headings": [
+      "KODE Immersive",
+      "Butter",
+      "Agentcard",
+      "affectUI",
+      "Impossible Foods",
+      "Greptile",
+      "Cassette",
+      "Phantom Studios",
+      "Wispr Flow",
+      "Spade",
+      "Oryzo AI",
+      "Anime.js"
+    ]
+  },
+  {
+    "url": "https://www.superlist.com/",
+    "title": "Superlist \u2014 A little less on your mind",
+    "screenshot": "shots/reference-superlist.png",
+    "headings": [
+      "A little less on your mind.",
+      "Less keeping track. More moving forward.",
+      "Catch the thought. Keep your flow.",
+      "A full life. A doable day.",
+      "The task is only half the story.",
+      "On the same page. Without the follow-up.",
+      "All your hats.One place to put them.",
+      "Your day moves. Your lists do, too.",
+      "A little clarity before you start.",
+      "Big exhale. Small first step."
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+Call It listening at http://127.0.0.1:61872
+/ 200
+/health 200
+/manus-routes.json 200
+/engine.mjs 200
+/vendor/three.module.js 200
+/vendor/gsap.min.js 200
+/server.mjs 404
+/RULES.md 404
+PASS HTTP endpoint, local vendor serving and static boundary. Port 8787 was already occupied; its listener was not touched.
+Stopped test server.

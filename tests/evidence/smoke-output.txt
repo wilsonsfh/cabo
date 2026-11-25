@@ -1,0 +1,13 @@
+{
+  "errors": [],
+  "checks": [
+    "health ok",
+    "lobby loads",
+    "two-card private peek",
+    "explicit hide",
+    "solo round completes",
+    "no horizontal overflow",
+    "no page errors"
+  ],
+  "passed": true
+}

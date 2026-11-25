@@ -1,0 +1,153 @@
+
+> pocket-island-cabo-prototype@0.1.0 test
+> node --test tests/engine.test.mjs
+
+TAP version 13
+# Verified 1,000 standard games and 508,878 legal reducer actions.
+# Subtest: 52-card rank distribution; seeded engine is deterministic and does not mutate inputs
+ok 1 - 52-card rank distribution; seeded engine is deterministic and does not mutate inputs
+  ---
+  duration_ms: 2.509958
+  type: 'test'
+  ...
+# Subtest: initial peek exactly two once and hides on readiness
+ok 2 - initial peek exactly two once and hides on readiness
+  ---
+  duration_ms: 1.31525
+  type: 'test'
+  ...
+# Subtest: typed rejection of illegal phases, other-player moves, state payloads and unknown actions
+ok 3 - typed rejection of illegal phases, other-player moves, state payloads and unknown actions
+  ---
+  duration_ms: 0.593417
+  type: 'test'
+  ...
+# Subtest: deck replacement hides; discard replacement is public and cannot activate power or discard
+ok 4 - deck replacement hides; discard replacement is public and cannot activate power or discard
+  ---
+  duration_ms: 0.861792
+  type: 'test'
+  ...
+# Subtest: multiple matching cards collapse into a single replacement in the first chosen slot
+ok 5 - multiple matching cards collapse into a single replacement in the first chosen slot
+  ---
+  duration_ms: 0.276333
+  type: 'test'
+  ...
+# Subtest: failed 2-card exchange: exposed selected cards and correct penalty
+ok 6 - failed 2-card exchange: exposed selected cards and correct penalty
+  ---
+  duration_ms: 0.337125
+  type: 'test'
+  ...
+# Subtest: failed 3-card exchange: exposed selected cards and correct penalty
+ok 7 - failed 3-card exchange: exposed selected cards and correct penalty
+  ---
+  duration_ms: 0.300333
+  type: 'test'
+  ...
+# Subtest: failed 4-card exchange: exposed selected cards and correct penalty
+ok 8 - failed 4-card exchange: exposed selected cards and correct penalty
+  ---
+  duration_ms: 0.6395
+  type: 'test'
+  ...
+# Subtest: rank 7 private peek; explicit hide advances turn
+ok 9 - rank 7 private peek; explicit hide advances turn
+  ---
+  duration_ms: 0.987917
+  type: 'test'
+  ...
+# Subtest: rank 8 private peek; explicit hide advances turn
+ok 10 - rank 8 private peek; explicit hide advances turn
+  ---
+  duration_ms: 0.738958
+  type: 'test'
+  ...
+# Subtest: rank 9 private spy; explicit hide advances turn
+ok 11 - rank 9 private spy; explicit hide advances turn
+  ---
+  duration_ms: 0.4515
+  type: 'test'
+  ...
+# Subtest: rank 10 private spy; explicit hide advances turn
+ok 12 - rank 10 private spy; explicit hide advances turn
+  ---
+  duration_ms: 0.369334
+  type: 'test'
+  ...
+# Subtest: rank 11 swaps one own and opponent card without flipping
+ok 13 - rank 11 swaps one own and opponent card without flipping
+  ---
+  duration_ms: 0.646959
+  type: 'test'
+  ...
+# Subtest: rank 12 swaps one own and opponent card without flipping
+ok 14 - rank 12 swaps one own and opponent card without flipping
+  ---
+  duration_ms: 0.4655
+  type: 'test'
+  ...
+# Subtest: no ability on 0..6/13, power skip is legal, face-up card cannot be privately peeked
+ok 15 - no ability on 0..6/13, power skip is legal, face-up card cannot be privately peeked
+  ---
+  duration_ms: 0.804375
+  type: 'test'
+  ...
+# Subtest: call consumes turn, other player gets exactly one final turn, caller remains swap target
+ok 16 - call consumes turn, other player gets exactly one final turn, caller remains swap target
+  ---
+  duration_ms: 0.627833
+  type: 'test'
+  ...
+# Subtest: last deck draw resolves before scoring; no reshuffle
+ok 17 - last deck draw resolves before scoring; no reshuffle
+  ---
+  duration_ms: 0.440166
+  type: 'test'
+  ...
+# Subtest: scoring: caller tied lowest zero, unsuccessful +10, noncaller always sum, exact Kamikaze
+ok 18 - scoring: caller tied lowest zero, unsuccessful +10, noncaller always sum, exact Kamikaze
+  ---
+  duration_ms: 0.277292
+  type: 'test'
+  ...
+# Subtest: one-time exact-100 reset; >100 game end; four-round option; both ready for new deal
+ok 19 - one-time exact-100 reset; >100 game end; four-round option; both ready for new deal
+  ---
+  duration_ms: 0.954292
+  type: 'test'
+  ...
+# Subtest: 1,000 seeded bot-vs-bot STANDARD full games terminate legally; every view is leak-checked
+ok 20 - 1,000 seeded bot-vs-bot STANDARD full games terminate legally; every view is leak-checked
+  ---
+  duration_ms: 83110.993625
+  type: 'test'
+  ...
+# Subtest: Quick profile never resets 100 and never ends before the configured round count
+ok 21 - Quick profile never resets 100 and never ends before the configured round count
+  ---
+  duration_ms: 0.587959
+  type: 'test'
+  ...
+# Subtest: Classic exact-100 reset is consumed and never repeats
+ok 22 - Classic exact-100 reset is consumed and never repeats
+  ---
+  duration_ms: 0.275417
+  type: 'test'
+  ...
+# Subtest: Malformed target and action values always reject as RuleError
+ok 23 - Malformed target and action values always reject as RuleError
+  ---
+  duration_ms: 0.437833
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 83188.241083

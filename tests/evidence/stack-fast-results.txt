@@ -1,0 +1,38 @@
+TAP version 13
+# LOWKEY listening at http://127.0.0.1:37575
+# Subtest: standard deck artwork: every visible face has mirrored rank indices and no undefined content
+ok 1 - standard deck artwork: every visible face has mirrored rank indices and no undefined content
+  ---
+  duration_ms: 15.329234
+  type: 'test'
+  ...
+# Subtest: hidden artwork never renders a rank even if extra secret fields are accidentally passed
+ok 2 - hidden artwork never renders a rank even if extra secret fields are accidentally passed
+  ---
+  duration_ms: 0.67539
+  type: 'test'
+  ...
+# Subtest: strict script CSP and zero-install static assets are served locally
+ok 3 - strict script CSP and zero-install static assets are served locally
+  ---
+  duration_ms: 39.939146
+  type: 'test'
+  ...
+# Subtest: Host, method and private-file boundaries reject
+ok 4 - Host, method and private-file boundaries reject
+  ---
+  duration_ms: 18.383948
+  type: 'test'
+  ...
+# Subtest: cross-origin WebSocket upgrade rejects
+ok 5 - cross-origin WebSocket upgrade rejects
+  ---
+  duration_ms: 5.030089
+  type: 'test'
+  ...
+# Subtest: chat is authenticated by room seat, bounded, rate-limited and does not advance the game revision
+ok 6 - chat is authenticated by room seat, bounded, rate-limited and does not advance the game revision
+  ---
+  duration_ms: 45.529887
+  type: 'test'
+  ...

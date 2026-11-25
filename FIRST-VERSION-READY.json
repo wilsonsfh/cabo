@@ -1,0 +1,12 @@
+{
+  "item": "q2",
+  "status": "first_version_ready",
+  "timestamp": "2026-11-25T22:41:15+08:00",
+  "ready_for_sync": true,
+  "summary": "Wilson's standard suited deck and distinct Jack/Queen rules are implemented. Engine regressions and an actual two-WebSocket-client four-round loop pass. New SVG poker lobby and private-peek UI render; full responsive/browser verification follows.",
+  "changed_files": ["engine.mjs", "server.mjs", "client/app.mjs", "client/cards.mjs", "client/scene.mjs", "client/style.css", "client/index.html", "client/transport.mjs", "client/vendor/fonts/", "vendor/ws/", "tests/engine.test.mjs", "tests/integration.mjs", "tests/smoke.py", "tests/browser.py", "package.json", "package-lock.json", "RULES.md", "VENDOR.md", "RESTYLE-CHANGELOG.md"],
+  "start_command": "cd /home/ubuntu/AI-round/analysis/p2-prototype && PORT=4812 node server.mjs",
+  "portable_start_command": "cd analysis/p2-prototype && PORT=4812 node server.mjs",
+  "tests": ["Node --check passed for server, engine, client controller, cards, scene and transport", "node --test tests/engine.test.mjs: 27/27 passed; 1000 Classic games, 490572 legal reducer actions, 7223 Queen decisions, 7123 Jack swaps", "node tests/integration.mjs: two real WebSocket clients completed 4 rounds in 219 actions; filtered wire views, rematch, stale-action rejection, pause/resume, invalid-token rejection and forfeit passed", "Headless Chromium under flock: lobby and private two-card peek rendered, screenshots saved; no page errors observed in that partial run"],
+  "limits": ["Full browser core-loop and 390/820/1440 light/dark verification still in progress at this milestone", "Initial browser test harness used a CSP-incompatible wait helper; corrected to DevTools polling without weakening application CSP", "Local two-player prototype; server knows full deck; chat is not end-to-end encrypted", "Rooms and chat are in memory and cleared on restart", "Restart an existing Mac Q2 server after sync; no install needed because ws is vendored"]
+}

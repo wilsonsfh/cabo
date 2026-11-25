@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#e9eef0"><meta name="description" content="A tiny island. Four secret cards. One very bold call. An original 3D CABO-family memory game for two friends.">
+  <title>LOWKEY — Pocket Island</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23243243'/%3E%3Cpath d='M32 10 52 32 32 54 12 32Z' fill='%23f5cf65'/%3E%3Ccircle cx='26' cy='29' r='3' fill='%23243243'/%3E%3Ccircle cx='38' cy='29' r='3' fill='%23243243'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+  <script src="/vendor/gsap.min.js" defer></script>
+  <script type="module" src="/app.mjs"></script>
+</head>
+<body>
+  <header class="topbar">
+    <button class="wordmark" id="home" aria-label="Return to lobby"><span class="mark" aria-hidden="true">◇</span> LOWKEY<span class="edition">POCKET ISLAND</span></button>
+    <nav aria-label="Game utilities"><button class="quiet" id="rules-open">How to play</button><button class="quiet" id="sound" aria-pressed="false">Sound off</button><button class="quiet" id="motion" aria-pressed="false">Less motion</button></nav>
+  </header>
+  <main>
+    <section id="lobby" class="lobby">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> A LITTLE GAME OF MEMORY & MISCHIEF</p>
+        <h1>Four cards.<br>One <span class="slant">bold</span> call.</h1>
+        <p class="intro">Keep your score low. Keep your secrets close.<br>Meet your friend on a very small island.</p>
+        <div class="play-panel">
+          <div class="input-row"><label>Your name<input id="name" maxlength="32" placeholder="You" autocomplete="nickname"></label><label>Match<select id="mode"><option value="quick">Quick · 4 rounds</option><option value="standard">Classic · to 100</option></select></label></div>
+          <button class="primary" id="solo">Play with Pip <span>↗</span></button>
+          <button class="secondary" id="create">Invite a friend <span>+</span></button>
+          <div class="join-row"><input id="room-code" maxlength="6" placeholder="ROOM CODE" aria-label="Six-character room code" autocomplete="off"><button id="join" class="join">Join →</button></div>
+          <p id="lobby-message" class="small" role="status">No account. No download. Just one more round.</p>
+        </div>
+      </div>
+      <div class="hero-caption"><span class="caption-rule"></span><strong>Meet the locals.</strong><p>Original little characters.<br>A real memory game beneath the charm.</p><span class="mono">2 PLAYERS / 3D / CLICK TO PLAY</span></div>
+      <div class="lobby-foot"><span>LOW SCORE, HIGH STAKES.</span><span>CABO-family · original art & sound</span><a href="#" id="rules-footer">The rules, in 30 seconds ↗</a></div>
+    </section>
+    <section id="table-ui" class="table-ui" hidden>
+      <div class="match-bar"><button class="quiet" id="leave">← Lobby</button><span id="match-label">SOLO TABLE</span><span id="round-label">ROUND 1 / 4</span></div>
+      <div class="score-strip"><div class="seat" id="opponent-seat"><span class="avatar coral">◇</span><div><strong id="opponent-name">Pip</strong><span id="opponent-score">0 total points</span></div><span class="seat-status" id="opponent-status">MEMORY BOT</span></div><div class="seat yours" id="self-seat"><span class="avatar blue">◇</span><div><strong id="self-name">You</strong><span id="self-score">0 total points</span></div><span class="seat-status">YOU</span></div></div>
+      <div class="turn-panel"><span id="turn-tag" class="eyebrow">YOUR TURN</span><h2 id="instruction">Draw a card.</h2><p id="hint">Or call it if you think your score is lowest.</p></div>
+      <div class="event-note" id="event-note" aria-live="polite"></div>
+      <div class="table-legend"><span>OPPONENT</span><span>YOUR FOUR SECRET CARDS</span></div>
+      <div id="card-controls" class="card-controls" aria-label="Card slots"></div>
+      <div class="action-dock" id="actions"></div>
+      <div class="keyboard-help" id="keyboard-help">D draw · C call · 1–4 your cards · Shift + 1–4 opponent</div>
+      <div id="waiting" class="waiting-card" hidden><p class="eyebrow">YOUR PRIVATE TABLE</p><h2>Good things come in twos.</h2><p>Share this code or send the invite link.</p><div id="invite-code" class="invite-code"></div><div class="invite-buttons"><button id="copy-invite" class="primary">Copy invite link</button><button id="start-match" class="secondary">Start match</button></div><p id="waiting-status" class="small">Waiting for your friend…</p></div>
+      <div id="results" class="results-card" hidden><p class="eyebrow" id="result-tag">ROUND COMPLETE</p><h2 id="result-title">Nice call.</h2><p id="result-subtitle"></p><div id="result-scores"></div><div id="result-action"></div></div>
+    </section>
+    <div id="world" class="world"><canvas id="canvas" aria-label="3D pocket island game table"></canvas><div id="fallback" hidden><p>3D is unavailable on this device. The complete game still works with the card buttons below.</p></div></div>
+  </main>
+  <div id="toast" class="toast" role="status"></div><div class="sr-only" id="announcer" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="rules"><div class="dialog-head"><span class="eyebrow">THE SHORT VERSION</span><button id="rules-close" class="quiet">Close ×</button></div><h2>Remember less.<br>Win more.</h2><p>Four secret cards. Look at two, once. The lowest total wins.</p><ol><li><strong>Draw or call.</strong> Take the deck top privately, or the public discard. Calling uses your turn and gives your friend one final turn.</li><li><strong>Keep or discard.</strong> Replace one card, or several matching own cards. A public discard must be kept face up. Deck cards stay secret.</li><li><strong>Use a little mischief.</strong> Discard a deck-drawn 7/8 to peek at yours, 9/10 to spy at theirs, 11/12 to swap one each without looking.</li></ol><div class="rule-powers"><span>7–8 <b>PEEK</b></span><span>9–10 <b>SPY</b></span><span>11–12 <b>SWAP</b></span></div><p class="small">A failed multi-card match exposes your selected cards and adds the drawn card; three or more also adds one unseen penalty card. Caller lowest/tied: 0 points. Otherwise: sum +10. Everyone else scores their sum. Exactly 12,12,13,13: you score 0, they score 50.</p><p class="small">Quick: four rounds. Classic: first total above 100 ends the match; exactly 100 resets to 50 once. Deck exhaustion also ends a round. No snap/slap rule. Original prototype, not affiliated with CABO publishers or Nintendo.</p><button id="rules-play" class="primary">Got it. Let's play.</button></dialog>
+</body>
+</html>

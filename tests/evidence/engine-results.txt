@@ -1,0 +1,173 @@
+TAP version 13
+# {"games":1000,"actions":490572,"queenDecisions":7223,"jackSwaps":7123}
+# Subtest: exact 52-card suited deck: 13 unique ranks per suit, opaque UUIDs, no jokers or zeros
+ok 1 - exact 52-card suited deck: 13 unique ranks per suit, opaque UUIDs, no jokers or zeros
+  ---
+  duration_ms: 8.42309
+  type: 'test'
+  ...
+# Subtest: seeded deals are reproducible apart from intentionally random opaque identity; reducers are immutable
+ok 2 - seeded deals are reproducible apart from intentionally random opaque identity; reducers are immutable
+  ---
+  duration_ms: 7.411348
+  type: 'test'
+  ...
+# Subtest: Ace, number cards, Jack, Queen, red and black King scoring
+ok 3 - Ace, number cards, Jack, Queen, red and black King scoring
+  ---
+  duration_ms: 1.783711
+  type: 'test'
+  ...
+# Subtest: initial peek exactly two once; hides on readiness; all private fields filtered
+ok 4 - initial peek exactly two once; hides on readiness; all private fields filtered
+  ---
+  duration_ms: 2.74506
+  type: 'test'
+  ...
+# Subtest: typed rejection: illegal phases, other-player moves, injected state and unknown actions
+ok 5 - typed rejection: illegal phases, other-player moves, injected state and unknown actions
+  ---
+  duration_ms: 2.219215
+  type: 'test'
+  ...
+# Subtest: deck replacement stays hidden; discard replacement is public and cannot trigger powers
+ok 6 - deck replacement stays hidden; discard replacement is public and cannot trigger powers
+  ---
+  duration_ms: 2.578199
+  type: 'test'
+  ...
+# Subtest: matching score values collapse into first selected slot, keeping spatial memory
+ok 7 - matching score values collapse into first selected slot, keeping spatial memory
+  ---
+  duration_ms: 1.236606
+  type: 'test'
+  ...
+# Subtest: failed 2-card exchange exposes selection and adds correct penalties
+ok 8 - failed 2-card exchange exposes selection and adds correct penalties
+  ---
+  duration_ms: 1.509812
+  type: 'test'
+  ...
+# Subtest: failed 3-card exchange exposes selection and adds correct penalties
+ok 9 - failed 3-card exchange exposes selection and adds correct penalties
+  ---
+  duration_ms: 1.517243
+  type: 'test'
+  ...
+# Subtest: failed 4-card exchange exposes selection and adds correct penalties
+ok 10 - failed 4-card exchange exposes selection and adds correct penalties
+  ---
+  duration_ms: 1.529122
+  type: 'test'
+  ...
+# Subtest: 7: private own peek, explicit hide
+ok 11 - 7: private own peek, explicit hide
+  ---
+  duration_ms: 2.000172
+  type: 'test'
+  ...
+# Subtest: 8: private own peek, explicit hide
+ok 12 - 8: private own peek, explicit hide
+  ---
+  duration_ms: 1.804042
+  type: 'test'
+  ...
+# Subtest: 9: private opponent peek, explicit hide
+ok 13 - 9: private opponent peek, explicit hide
+  ---
+  duration_ms: 1.26612
+  type: 'test'
+  ...
+# Subtest: 10: private opponent peek, explicit hide
+ok 14 - 10: private opponent peek, explicit hide
+  ---
+  duration_ms: 1.177899
+  type: 'test'
+  ...
+# Subtest: Jack trigger is optional, but triggered blind swap is mandatory and does not reveal
+ok 15 - Jack trigger is optional, but triggered blind swap is mandatory and does not reveal
+  ---
+  duration_ms: 2.956415
+  type: 'test'
+  ...
+# Subtest: Jack may skip only when no legal target pair exists
+ok 16 - Jack may skip only when no legal target pair exists
+  ---
+  duration_ms: 1.228709
+  type: 'test'
+  ...
+# Subtest: Queen privately looks at both cards then explicit swapDecision true
+ok 17 - Queen privately looks at both cards then explicit swapDecision true
+  ---
+  duration_ms: 2.905487
+  type: 'test'
+  ...
+# Subtest: Queen privately looks at both cards then explicit swapDecision false
+ok 18 - Queen privately looks at both cards then explicit swapDecision false
+  ---
+  duration_ms: 1.880227
+  type: 'test'
+  ...
+# Subtest: Queen cannot inspect more cards by retargeting or decide before looking
+ok 19 - Queen cannot inspect more cards by retargeting or decide before looking
+  ---
+  duration_ms: 1.436827
+  type: 'test'
+  ...
+# Subtest: swaps preserve public face orientation, including the caller as a legal target
+ok 20 - swaps preserve public face orientation, including the caller as a legal target
+  ---
+  duration_ms: 1.597179
+  type: 'test'
+  ...
+# Subtest: no powers for A–6 or Kings; face-up peeks reject; peek skip remains legal
+ok 21 - no powers for A–6 or Kings; face-up peeks reject; peek skip remains legal
+  ---
+  duration_ms: 2.840707
+  type: 'test'
+  ...
+# Subtest: last deck draw and Queen decision resolve before deck exhaustion scoring
+ok 22 - last deck draw and Queen decision resolve before deck exhaustion scoring
+  ---
+  duration_ms: 1.676142
+  type: 'test'
+  ...
+# Subtest: call scoring remains: tied lowest zero, unsuccessful sum+10, others sum; no Kamikaze
+ok 23 - call scoring remains: tied lowest zero, unsuccessful sum+10, others sum; no Kamikaze
+  ---
+  duration_ms: 0.836509
+  type: 'test'
+  ...
+# Subtest: classic exact-100 reset only once; >100 ends; both players consent before a new deal
+ok 24 - classic exact-100 reset only once; >100 ends; both players consent before a new deal
+  ---
+  duration_ms: 5.051792
+  type: 'test'
+  ...
+# Subtest: Quick profile never resets 100, never ends early, ends at configured round count
+ok 25 - Quick profile never resets 100, never ends early, ends at configured round count
+  ---
+  duration_ms: 2.95883
+  type: 'test'
+  ...
+# Subtest: malformed targets/actions reject as RuleError without mutating state
+ok 26 - malformed targets/actions reject as RuleError without mutating state
+  ---
+  duration_ms: 1.531297
+  type: 'test'
+  ...
+# Subtest: 1,000 seeded bot-vs-bot Classic games terminate legally; every hidden view leak-checked
+ok 27 - 1,000 seeded bot-vs-bot Classic games terminate legally; every hidden view leak-checked
+  ---
+  duration_ms: 192083.884817
+  type: 'test'
+  ...
+1..27
+# tests 27
+# suites 0
+# pass 27
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 192309.381224

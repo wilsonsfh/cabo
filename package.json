@@ -1,0 +1,17 @@
+{
+  "name": "lowkey-ink-table-prototype",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/engine.test.mjs tests/boundaries.test.mjs tests/stack-boundaries.test.mjs",
+    "test:integration": "node tests/integration.mjs",
+    "test:browser": "flock -x -w 120 /tmp/chrome.lock python3 tests/stack-browser.py",
+    "check": "node --check server.mjs && node --check engine.mjs && node --check client/app.mjs && node --check client/cards.mjs && node --check client/scene.mjs && node --check client/transport.mjs"
+  },
+  "dependencies": {},
+  "vendoredDependencies": {
+    "ws": "8.23.0"
+  }
+}

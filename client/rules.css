@@ -1,0 +1,14 @@
+/* Rules interaction layer; environment/card design remains separately owned. */
+button { min-height: 52px !important; transition: transform 160ms cubic-bezier(.23,1,.32,1), opacity 160ms cubic-bezier(.23,1,.32,1), background-color 160ms cubic-bezier(.23,1,.32,1) !important; }
+button:not(:disabled):active { transform: scale(.97) !important; }
+.stack-ready { border-inline-start: 3px solid var(--ink, #264e60); padding-inline-start: 16px; }
+.card-slot.stack-card { outline: 2px solid currentColor; outline-offset: 3px; }
+@media (hover:hover) and (pointer:fine) {
+  .card-slot.stack-card:not(:disabled):hover { outline-width: 3px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  button { transition: none !important; }
+  button:not(:disabled):active { transform: none !important; }
+}
+.reduce-motion button { transition: none !important; }
+.reduce-motion button:not(:disabled):active { transform: none !important; }

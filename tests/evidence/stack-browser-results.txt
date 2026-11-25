@@ -1,0 +1,28 @@
+{
+  "checks": [
+    "fixture draws Queen privately",
+    "Stack button appears at discard moment",
+    "both peers show pending countdown",
+    "power not started during window",
+    "wrong stack adds hidden card and retains pending discard",
+    "penalty face remains hidden to both clients",
+    "stack transfers Queen and leaves original active turn",
+    "winner receives clear message",
+    "discarder receives cancellation message",
+    "only stacker receives Queen pair",
+    "nonacting client gets no private faces",
+    "power completion advances only original turn once",
+    "stack unavailable after power window",
+    "celebration demo still resolves genuine match",
+    "no horizontal overflow",
+    "zero page errors",
+    "zero console errors"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "shots": [
+    "shots/stack-desktop-light.png",
+    "shots/stack-mobile-dark.png"
+  ],
+  "passed": true
+}

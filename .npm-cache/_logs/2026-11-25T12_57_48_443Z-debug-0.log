@@ -1,0 +1,19 @@
+0 verbose cli /Users/WilsonSoon/.nvm/versions/node/v22.23.4/bin/node /Users/WilsonSoon/.nvm/versions/node/v22.23.4/bin/npm
+1 info using npm@10.9.9
+2 info using node@v22.23.4
+3 silly config load:file:/Users/WilsonSoon/.nvm/versions/node/v22.23.4/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/WilsonSoon/Downloads/Interviews/ManusAI/AI-round/analysis/p2-prototype/.npmrc
+5 silly config load:file:/Users/WilsonSoon/.npmrc
+6 silly config load:file:/Users/WilsonSoon/.nvm/versions/node/v22.23.4/etc/npmrc
+7 verbose title npm view three version
+8 verbose argv "--cache" "/Users/WilsonSoon/Downloads/Interviews/ManusAI/AI-round/analysis/p2-prototype/.npm-cache" "view" "three" "version"
+9 verbose logfile logs-max:10 dir:/Users/WilsonSoon/Downloads/Interviews/ManusAI/AI-round/analysis/p2-prototype/.npm-cache/_logs/2026-11-25T12_57_48_443Z-
+10 verbose logfile /Users/WilsonSoon/Downloads/Interviews/ManusAI/AI-round/analysis/p2-prototype/.npm-cache/_logs/2026-11-25T12_57_48_443Z-debug-0.log
+11 silly logfile done cleaning log files
+12 http fetch GET 200 https://registry.npmjs.org/three 130ms (cache miss)
+13 verbose cwd /Users/WilsonSoon/Downloads/Interviews/ManusAI/AI-round/analysis/p2-prototype
+14 verbose os Darwin 27.0.0
+15 verbose node v22.23.4
+16 verbose npm  v10.9.9
+17 verbose exit 0
+18 info ok

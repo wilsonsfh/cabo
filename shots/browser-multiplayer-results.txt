@@ -1,0 +1,28 @@
+Call It listening at http://127.0.0.1:60100
+{
+  "passed": true,
+  "twoIndependentTabs": true,
+  "fullRounds": 4,
+  "steps": 249,
+  "sharedResult": {
+    "sums": {
+      "p0": 11,
+      "p1": 10
+    },
+    "points": {
+      "p0": 11,
+      "p1": 0
+    },
+    "moon": null,
+    "caller": "p1",
+    "successfulCall": true,
+    "round": 4,
+    "reason": "call",
+    "totals": {
+      "p0": 60,
+      "p1": 8
+    }
+  },
+  "unanimousRematch": true,
+  "errors": []
+}

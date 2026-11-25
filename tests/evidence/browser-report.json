@@ -1,0 +1,202 @@
+{
+  "checks": [
+    "390 light lobby no horizontal overflow",
+    "390 light lobby interactive target floor",
+    "390 light own selection survives opponent readiness",
+    "390 light two-card own peek",
+    "390 light table no horizontal overflow",
+    "390 light table interactive target floor",
+    "390 light avatars do not cover cards",
+    "390 light explicit hide clears private faces",
+    "390 light rules dialog works",
+    "390 light Escape closes rules",
+    "390 dark lobby no horizontal overflow",
+    "390 dark lobby interactive target floor",
+    "390 dark own selection survives opponent readiness",
+    "390 dark two-card own peek",
+    "390 dark table no horizontal overflow",
+    "390 dark table interactive target floor",
+    "390 dark avatars do not cover cards",
+    "390 dark explicit hide clears private faces",
+    "390 dark rules dialog works",
+    "390 dark Escape closes rules",
+    "820 light lobby no horizontal overflow",
+    "820 light lobby interactive target floor",
+    "820 light own selection survives opponent readiness",
+    "820 light two-card own peek",
+    "820 light table no horizontal overflow",
+    "820 light table interactive target floor",
+    "820 light avatars do not cover cards",
+    "820 light explicit hide clears private faces",
+    "820 light rules dialog works",
+    "820 light Escape closes rules",
+    "820 dark lobby no horizontal overflow",
+    "820 dark lobby interactive target floor",
+    "820 dark own selection survives opponent readiness",
+    "820 dark two-card own peek",
+    "820 dark table no horizontal overflow",
+    "820 dark table interactive target floor",
+    "820 dark avatars do not cover cards",
+    "820 dark explicit hide clears private faces",
+    "820 dark rules dialog works",
+    "820 dark Escape closes rules",
+    "1440 light lobby no horizontal overflow",
+    "1440 light lobby interactive target floor",
+    "1440 light own selection survives opponent readiness",
+    "1440 light two-card own peek",
+    "1440 light table no horizontal overflow",
+    "1440 light table interactive target floor",
+    "1440 light avatars do not cover cards",
+    "1440 light explicit hide clears private faces",
+    "1440 light rules dialog works",
+    "1440 light Escape closes rules",
+    "1440 dark lobby no horizontal overflow",
+    "1440 dark lobby interactive target floor",
+    "1440 dark own selection survives opponent readiness",
+    "1440 dark two-card own peek",
+    "1440 dark table no horizontal overflow",
+    "1440 dark table interactive target floor",
+    "1440 dark avatars do not cover cards",
+    "1440 dark explicit hide clears private faces",
+    "1440 dark rules dialog works",
+    "1440 dark Escape closes rules",
+    "p0 sees only own initial two cards",
+    "p1 sees only own initial two cards",
+    "real chat delivered and escaped",
+    "chat does not create markup",
+    "triggered Jack has no skip button",
+    "Queen presents explicit swap and keep controls",
+    "Queen has no skip control",
+    "two browsers finish four real rounds",
+    "both peers agree on result and totals",
+    "reduced-motion peer reaches the same outcome",
+    "unanimous rematch deals new cards",
+    "browser reload and seat-token reconnect works",
+    "keyboard-only initial peek and ready works for both seats",
+    "no page errors",
+    "no console errors"
+  ],
+  "screenshots": [
+    "shots/restyle-lobby-390-light.png",
+    "shots/restyle-table-390-light.png",
+    "shots/restyle-lobby-390-dark.png",
+    "shots/restyle-table-390-dark.png",
+    "shots/restyle-lobby-820-light.png",
+    "shots/restyle-table-820-light.png",
+    "shots/restyle-lobby-820-dark.png",
+    "shots/restyle-table-820-dark.png",
+    "shots/restyle-lobby-1440-light.png",
+    "shots/restyle-table-1440-light.png",
+    "shots/restyle-lobby-1440-dark.png",
+    "shots/restyle-table-1440-dark.png",
+    "shots/restyle-network-desktop.png",
+    "shots/restyle-network-mobile-dark-reduced.png",
+    "shots/restyle-jack-mandatory.png",
+    "shots/restyle-queen-private-choice.png",
+    "shots/restyle-network-final.png",
+    "shots/restyle-network-final-mobile.png"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "responsive": [
+    {
+      "width": 390,
+      "scheme": "light",
+      "dpr": 2,
+      "overflow": {
+        "viewport": 390,
+        "document": 390,
+        "overflow": false
+      },
+      "smallControls": []
+    },
+    {
+      "width": 390,
+      "scheme": "dark",
+      "dpr": 2,
+      "overflow": {
+        "viewport": 390,
+        "document": 390,
+        "overflow": false
+      },
+      "smallControls": []
+    },
+    {
+      "width": 820,
+      "scheme": "light",
+      "dpr": 2,
+      "overflow": {
+        "viewport": 820,
+        "document": 820,
+        "overflow": false
+      },
+      "smallControls": []
+    },
+    {
+      "width": 820,
+      "scheme": "dark",
+      "dpr": 2,
+      "overflow": {
+        "viewport": 820,
+        "document": 820,
+        "overflow": false
+      },
+      "smallControls": []
+    },
+    {
+      "width": 1440,
+      "scheme": "light",
+      "dpr": 2,
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440,
+        "overflow": false
+      },
+      "smallControls": []
+    },
+    {
+      "width": 1440,
+      "scheme": "dark",
+      "dpr": 2,
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440,
+        "overflow": false
+      },
+      "smallControls": []
+    }
+  ],
+  "powersSeen": [
+    "peek",
+    "blindSwap",
+    "spy",
+    "lookSwap"
+  ],
+  "network": {
+    "room": "FA7A99",
+    "actions": 174,
+    "rounds": 4,
+    "sharedResult": {
+      "sums": {
+        "p0": 9,
+        "p1": 15
+      },
+      "points": {
+        "p0": 0,
+        "p1": 15
+      },
+      "caller": "p0",
+      "successfulCall": true,
+      "round": 4,
+      "reason": "call",
+      "totals": {
+        "p0": 22,
+        "p1": 24
+      }
+    },
+    "reducedMotion": true,
+    "rematch": true,
+    "reconnect": true
+  },
+  "passed": true
+}

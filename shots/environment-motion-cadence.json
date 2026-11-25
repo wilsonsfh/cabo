@@ -1,0 +1,29 @@
+{
+  "note": "Sandbox headless/software Chromium only. Synthetic one-card WAAPI repetition is representative motion, not a real engine action or native-GPU/sustained gameplay test. Celebration is the clean real seeded replay.",
+  "errors": [],
+  "cardMotionEnvironmentStatic": {
+    "samples": 240,
+    "meanMs": 16.665858333333333,
+    "medianMs": 16.699999999999818,
+    "p95Ms": 16.700000000000273,
+    "maxMs": 16.800000000000182,
+    "over25Ms": 0
+  },
+  "cardMotionEnvironmentAnimated": {
+    "samples": 240,
+    "meanMs": 17.01264166666667,
+    "medianMs": 16.699999999999818,
+    "p95Ms": 16.799999999999272,
+    "maxMs": 50.100000000000364,
+    "over25Ms": 4
+  },
+  "celebration": {
+    "samples": 240,
+    "meanMs": 16.87376666666667,
+    "medianMs": 16.699999999999818,
+    "p95Ms": 16.700000000000273,
+    "maxMs": 50.100000000000136,
+    "over25Ms": 2
+  },
+  "transientRemovedAfterSample": true
+}
