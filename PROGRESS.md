@@ -1,6 +1,6 @@
 # Pocket Island — build progress
 
-Started 2026-11-25, 20:55 Singapore time. Working title is neutral pending the analyst's naming recommendation. This is the explicitly requested local Node/ES-module prototype artifact, not a managed or published Manus Game.
+Started 2026-11-25, 20:55 Singapore time. Working title is neutral pending the analyst's naming recommendation. This is the explicitly requested local Node/ES-module prototype artifact, not a managed or published Client Game.
 
 ## Priorities and budget
 

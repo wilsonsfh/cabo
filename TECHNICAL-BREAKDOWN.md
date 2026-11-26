@@ -257,7 +257,7 @@ TESTED-REPORTED: QA commands use Python Playwright, `/usr/bin/chromium --no-sand
 | Apple design skill | yes | Explicit Hide/focus/keyboard/targets; later system appearance, prominent actions and motion preference. | Complete later HIG/Mac/device audit unknown. [^review] [^final-style] [^app] |
 | Emil Kowalski skills | yes | .97/160ms custom-ease press and fine-pointer hover retained; current motion is interruptible 280ms WAAPI, not GSAP. | No drag/ScrollTrigger/forced choreography. [^review] [^final-style] [^scene] |
 
-TESTED-REPORTED: original tool-class traces are partial (`read`, `write`, `exec`); parent workflow launches are saved, not builder MCP traces. Later owner records name build-principles, Poteto, adapted Socratic coach, Emil and Apple reads, plus Q7/Unfold/Hub kit study, search/fetch/locked Chromium visits and `manus-analyze-video`. Exact research MCP names, development code-mode use and newer job IDs are unknown; no live model, managed webdev initialization, deployment or catalog retrieval is evidenced. [^cards-record] [^final-style] [^video-notes] [^docbrief]
+TESTED-REPORTED: original tool-class traces are partial (`read`, `write`, `exec`); parent workflow launches are saved, not builder MCP traces. Later owner records name build-principles, Poteto, adapted Socratic coach, Emil and Apple reads, plus Q7/Unfold/Hub kit study, search/fetch/locked Chromium visits and `client-analyze-video`. Exact research MCP names, development code-mode use and newer job IDs are unknown; no live model, managed webdev initialization, deployment or catalog retrieval is evidenced. [^cards-record] [^final-style] [^video-notes] [^docbrief]
 
 ## 12. Open questions and unknowns
 
@@ -315,5 +315,5 @@ TESTED-REPORTED: original tool-class traces are partial (`read`, `write`, `exec`
 [^boundary-tests]: `analysis/p2-prototype/tests/boundaries.test.mjs`, six SVG/HTTP/ws/chat tests.
 [^video-notes]: `analysis/p2-prototype/_ref/environment-video-notes.md`, 18 AI-assisted environment adaptation findings.
 [^humans]: `analysis/_inspo-notes.md`, humans& anchor, Q2 application and actual-product/rename directives.
-[^cards-record]: `analysis/_doc-evidence.md`, P2 analyst/builder job cards and lead reference audit; `.manus/mcp-results/mcp-run-ed09eb146b2416398ca89849da3219ad.json`, original parent launch.
-[^historic-readme]: `_archive/pre-restyle-2217/p2-prototype/README.md`, Durable Objects and Manus handoff (proposal only).
+[^cards-record]: `analysis/_doc-evidence.md`, P2 analyst/builder job cards and lead reference audit; `.client/mcp-results/mcp-run-ed09eb146b2416398ca89849da3219ad.json`, original parent launch.
+[^historic-readme]: `_archive/pre-restyle-2217/p2-prototype/README.md`, Durable Objects and Client handoff (proposal only).

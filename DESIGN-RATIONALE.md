@@ -49,7 +49,7 @@ TESTED-REPORTED: the first runnable restyle milestone was recorded at 22:41, rul
 | Optional synthesized sound; bounded online chat | Borrowed audio; pretend bot chat | Original WebAudio remains opt-in; chat is plain text, online-only, RAM-only and not end-to-end encrypted. [^audio] [^server] [^app] | IMPLEMENTED |
 | Complete room loop before polish | Accounts, matchmaking and broad content | Build slices put engine, solo and real rooms ahead of effects. [^progress] [^launch] | IMPLEMENTED |
 | No Reveal Receipt or persistent streaks | Analyst's signature post-hand replay | These were explicitly cut rather than presented as working features; current code adds celebration, not receipts. [^analyst] [^historic-readme] [^scene] | DEFERRED |
-| Local prototype, not managed publication | Managed Manus Game or Durable Objects | Owner delivered the explicitly requested folder; public persistence and Cloudflare port were not built. [^readme] | DEFERRED |
+| Local prototype, not managed publication | Managed Client Game or Durable Objects | Owner delivered the explicitly requested folder; public persistence and Cloudflare port were not built. [^readme] | DEFERRED |
 
 ## 4. How it was built and judged
 
@@ -85,12 +85,12 @@ UNKNOWN: the saved P2 job card has only partial recent-activity evidence and no 
 - TESTED-REPORTED: the owner opened library/rules sources and Inspora, including a headless rendered Inspora visit; the driver and report record navigation, computed font/background, pointer movement and scrolling. The exact search/fetch tool used for other sources is unknown. [^review] [^browser-script] [^browser-report]
 - IMPLEMENTED: the parent used workflow orchestration to launch this builder and the preceding analyst workflow. The saved launch files establish the parent operation, not builder access to that MCP. [^launch] [^analysis-launch]
 - TESTED-REPORTED: the restyle owner records search/fetch and first-hand locked headless Chromium visits to Inspora/Superlist; exact research MCP unknown. Later Python Playwright/Chromium runs use the shared lock, not an MCP browser. [^final-style] [^test-readme] [^verified]
-- TESTED-REPORTED: the environment owner used `manus-analyze-video` on the supplied before/after reference. This is AI-assisted visual interpretation, not frame-by-frame manual analysis. [^video-notes]
+- TESTED-REPORTED: the environment owner used `client-analyze-video` on the supplied before/after reference. This is AI-assisted visual interpretation, not frame-by-frame manual analysis. [^video-notes]
 
 ### Available but unverified for this builder
 
 - UNKNOWN: the lead session had `read`, `write`, `edit`, `exec`, `search`, `fetch`, `mcp`, `job` and `ask`. Builder access to any unrecorded class cannot be inferred from that parent inventory. [^docbrief]
-- UNKNOWN: the parent inventory included exa, manus-device, manus-tools, desktop-in-app-browser, kkday, slides, handoff, manus-tasks, triggers, trip, video-editor, webdev-mcp and workflow. No P2-specific call to these, except the parent's workflow launch, is established. [^docbrief] [^launch]
+- UNKNOWN: the parent inventory included exa, client-device, client-tools, desktop-in-app-browser, kkday, slides, handoff, client-tasks, triggers, trip, video-editor, webdev-mcp and workflow. No P2-specific call to these, except the parent's workflow launch, is established. [^docbrief] [^launch]
 
 ## 6. MCPs and skills: evidence tiers
 
@@ -197,10 +197,10 @@ Every row is TESTED-REPORTED and owner-run; documentation-agent re-run: **no**. 
 [^items]: `analysis/_prompts/build-items.json`, item `q2` (line 3).
 [^cloud]: `analysis/_design-pass-brief.md`, lines 3–21.
 [^cards]: `analysis/_doc-evidence.md`, workflow 4ac400b00c7e; workflow 615aa5e23d09; Things the build lead did itself.
-[^launch]: `.manus/mcp-results/mcp-run-ed09eb146b2416398ca89849da3219ad.json`, saved workflow script, binding direction, READ FIRST, pacing, engineering and priority sections.
-[^analysis-launch]: `.manus/mcp-results/mcp-run-d7b704e61797c3e6f556265cd3a75e50.json`, saved script `probs` item n=2 and `problemPrompt`.
+[^launch]: `.client/mcp-results/mcp-run-ed09eb146b2416398ca89849da3219ad.json`, saved workflow script, binding direction, READ FIRST, pacing, engineering and priority sections.
+[^analysis-launch]: `.client/mcp-results/mcp-run-d7b704e61797c3e6f556265cd3a75e50.json`, saved script `probs` item n=2 and `problemPrompt`.
 [^analyst]: `analysis/p2-multiplayer-cabo.md`, sections 1–10, especially Differentiator and identity, rules contract, architecture and Inspora translated.
-[^wilson]: `.manus/mcp-results/mcp-list_task_messages-b5d25b538f26fd5bf392fd0437491e00.json`, message `OjwPFXgmFKgx61r8G2zpb5`, Coordinator's saved Q2 benchmark feedback.
+[^wilson]: `.client/mcp-results/mcp-list_task_messages-b5d25b538f26fd5bf392fd0437491e00.json`, message `OjwPFXgmFKgx61r8G2zpb5`, Coordinator's saved Q2 benchmark feedback.
 [^readme]: `analysis/p2-prototype/README.md`, Start, Architecture and limits; rule/keyboard paragraphs are pre-correction and superseded by RULES.md.
 [^review]: `_archive/pre-restyle-2217/p2-prototype/DESIGN-REVIEW.md`, Research translated into choices; Exact motion application; Screenshot review and fixes; Why 3D earns its place; Opened sources.
 [^progress]: `_archive/pre-restyle-2217/p2-prototype/PROGRESS.md`, Priorities and budget; Research and decisions; 21:14/21:20/Final verification checkpoints; Honest completion boundary.
@@ -235,7 +235,7 @@ Every row is TESTED-REPORTED and owner-run; documentation-agent re-run: **no**. 
 [^vendor]: `analysis/p2-prototype/VENDOR.md`, ws/font provenance and inactive historical Three/GSAP resources.
 [^test-readme]: `analysis/p2-prototype/tests/README.md`, current locked Chromium commands and historical-evidence separation.
 [^humans]: `analysis/_inspo-notes.md`, humans& anchor rules, Q2 application and 23:25–23:33 directives.
-[^historic-readme]: `_archive/pre-restyle-2217/p2-prototype/README.md`, Real versus not built; Durable Objects and Manus handoff.
+[^historic-readme]: `_archive/pre-restyle-2217/p2-prototype/README.md`, Real versus not built; Durable Objects and Client handoff.
 [^oldscene]: `_archive/pre-restyle-2217/p2-prototype/client/scene.mjs`, historical raycast and demand-rendering implementation.
 
 ## Process note

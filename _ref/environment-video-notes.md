@@ -1,6 +1,6 @@
 # Environment reference — 23:06 +08, 25 November 2026
 
-1. Analysed the supplied `q2-environment-2252.mp4` with `manus-analyze-video`; these are AI-assisted visual findings, not a frame-by-frame manual transcription.
+1. Analysed the supplied `q2-environment-2252.mp4` with `client-analyze-video`; these are AI-assisted visual findings, not a frame-by-frame manual transcription.
 2. The before/after treatment turns a plain composition into an intimate illustrated habitat rather than adding conventional UI decoration.
 3. The viewpoint is slightly top-down / three-quarter, with chunky, simple tree canopies and a small house.
 4. The artwork reads as lo-fi, flat/pixel-like illustration; LOWKEY adapts the composition into Unfold/Hub wobbly pen lines and offset washes rather than copying pixel art.

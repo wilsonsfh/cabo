@@ -13,11 +13,11 @@ test('solo bot leaves a readable pause between actions and cancels on exit', t =
   const updates = [];
   const adapter = new LocalAdapter({ seed: 4, onState: value => updates.push(value), onError: assert.fail });
   t.after(() => adapter.close());
-  t.mock.timers.tick(1000);
+  t.mock.timers.tick(2100);
   assert.equal(updates.length, 1, 'the bot must not race the card animation');
   t.mock.timers.tick(100);
   assert.equal(updates.length, 2);
-  t.mock.timers.tick(1000);
+  t.mock.timers.tick(2100);
   assert.equal(updates.length, 2, 'each action gets its own pause');
   t.mock.timers.tick(100);
   assert.equal(updates.length, 3);
@@ -45,7 +45,7 @@ test('bot holds a private look longer before resolving its power', t => {
   adapter.state = state;
   adapter.emit();
   const version = state.version;
-  t.mock.timers.tick(1500);
+  t.mock.timers.tick(3100);
   assert.equal(adapter.state.version, version, 'the look should remain visible long enough to follow');
   t.mock.timers.tick(100);
   assert.ok(adapter.state.version > version);

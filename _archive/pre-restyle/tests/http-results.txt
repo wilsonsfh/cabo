@@ -1,7 +1,7 @@
 Call It listening at http://127.0.0.1:61872
 / 200
 /health 200
-/manus-routes.json 200
+/routes.json 200
 /engine.mjs 200
 /vendor/three.module.js 200
 /vendor/gsap.min.js 200

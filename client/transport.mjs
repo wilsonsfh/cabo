@@ -15,7 +15,7 @@ export class LocalAdapter {
       if (this.closed) return;
       try { const a = this.bot.action(viewFor(this.state, 'p1')); if (a) this.state = reduce(this.state, 'p1', a); this.emit(); }
       catch (e) { this.onError(e.message); }
-    }, this.state.phase === 'reveal' ? 1600 : 1100);
+    }, this.state.phase === 'reveal' ? 3200 : 2200);
   }
   action(action) { try { this.state = reduce(this.state, 'p0', action); this.emit(); if (this.state.lastEvent.type === 'stackRejected' || this.state.lastEvent.stackRejection) this.onError((this.state.lastEvent.stackRejection?.penalty ?? this.state.lastEvent.penalty) ? 'Not a match. One hidden penalty card added.' : 'Not a match. Deck empty; no penalty card available.'); } catch (e) { this.onError(e.message); } }
   rematch() { this.state = createGame({ seed: ++this.seed, maxRounds: this.mode === 'standard' ? 0 : 4 }); this.bot = createBot(this.seed + 9); this.emit(); }

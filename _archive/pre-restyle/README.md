@@ -7,7 +7,7 @@ A playable original 3D CABO-family game for two people. A pure deterministic eng
 Requires Node 22 or newer. Dependencies are already installed in this folder; no global install is needed.
 
 ```sh
-cd /Users/WilsonSoon/Downloads/Interviews/ManusAI/AI-round/analysis/p2-prototype
+cd /workspace/analysis/p2-prototype
 npm start
 ```
 
@@ -88,11 +88,11 @@ The server authenticates actions by socket-bound seat token and ignores client p
 
 **Security limits:** the server operator sees all cards. A modified client can retain values it legitimately learned. Players can collude or look at each other's screens. The seeded PRNG is deterministic, not cryptographic; use a stronger server shuffle/fairness design for competitive stakes. Tokens are bearer credentials, room state is RAM-only, and HTTP/WS is local-demo transport. Production requires TLS/WSS, durable state, deployment-specific Origin configuration, abuse protection and session expiry policy.
 
-## Durable Objects and Manus handoff
+## Durable Objects and Client handoff
 
 One room is the coordination atom. Keep `engine.mjs` and the filtered-view contract unchanged; replace Node maps with one Durable Object per code, persist state before broadcasting, use SQLite for state/revisions/receipts, WebSocket Hibernation attachments for seat identity, and durable alarms for reconnect deadlines. Node timers must not be copied into a hibernating DO. This is architectural portability, not a completed Cloudflare port.
 
-This deliverable is the explicitly requested local prototype folder, not an initialized/published managed Manus Game. A parent can reuse the engine, adapter interface, client modules, statechart, feature map and tests in an approved Three.js Game project. The current Game workflow requires its managed setup/online-host selection; do not relabel the game to evade that contract. Catalog tools are parent-only in this task; no catalog art is required because the user authorized original procedural characters. If later reusing catalog assets, preserve each asset's supplied license/provenance notices. No purchases are implied.
+This deliverable is the explicitly requested local prototype folder, not an initialized/published managed Client Game. A parent can reuse the engine, adapter interface, client modules, statechart, feature map and tests in an approved Three.js Game project. The current Game workflow requires its managed setup/online-host selection; do not relabel the game to evade that contract. Catalog tools are parent-only in this task; no catalog art is required because the user authorized original procedural characters. If later reusing catalog assets, preserve each asset's supplied license/provenance notices. No purchases are implied.
 
 ## Design and IP
 

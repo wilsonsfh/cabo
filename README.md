@@ -1,4 +1,4 @@
-# LOWKEY — the ink table
+# cabo
 
 A plain-local, two-player CABO prototype with an original SVG poker deck. Four hidden cards, a memory-only practice bot, or a real friend on the same server. The corrected 52-card rules and remaining provisional choices are in [RULES.md](RULES.md).
 
@@ -65,3 +65,7 @@ Live: https://cabo.wilsonsoon.workers.dev
 The public app uses a native Cloudflare Durable Object WebSocket adapter. Rooms remain ephemeral, matching the prototype; encryption/game logic stays in the original implementation. This remains an unaudited prototype.
 
 build browser assets with `node scripts/build-cloudflare.mjs`, then `wrangler deploy`. The original local Node server remains available.
+
+## Automatic publishing
+
+Pushes to `master` run syntax, game, timing, and multiplayer checks, then deploy the game to Cloudflare. The portfolio desktop embeds this live URL, so it receives the same version on reload without a separate release.

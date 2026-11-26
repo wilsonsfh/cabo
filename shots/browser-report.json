@@ -1,12 +1,12 @@
 {
   "screenshots": [
-    "/Users/WilsonSoon/Downloads/Interviews/ManusAI/AI-round/analysis/p2-prototype/shots/01-lobby.png",
-    "/Users/WilsonSoon/Downloads/Interviews/ManusAI/AI-round/analysis/p2-prototype/shots/02-table-mid-turn.png",
-    "/Users/WilsonSoon/Downloads/Interviews/ManusAI/AI-round/analysis/p2-prototype/shots/03-character-power.png",
-    "/Users/WilsonSoon/Downloads/Interviews/ManusAI/AI-round/analysis/p2-prototype/shots/04-round-end.png",
-    "/Users/WilsonSoon/Downloads/Interviews/ManusAI/AI-round/analysis/p2-prototype/shots/05-mobile-round-end.png",
-    "/Users/WilsonSoon/Downloads/Interviews/ManusAI/AI-round/analysis/p2-prototype/shots/06-fallback-table.png",
-    "/Users/WilsonSoon/Downloads/Interviews/ManusAI/AI-round/analysis/p2-prototype/shots/inspiration-inspora.png"
+    "/workspace/analysis/p2-prototype/shots/01-lobby.png",
+    "/workspace/analysis/p2-prototype/shots/02-table-mid-turn.png",
+    "/workspace/analysis/p2-prototype/shots/03-character-power.png",
+    "/workspace/analysis/p2-prototype/shots/04-round-end.png",
+    "/workspace/analysis/p2-prototype/shots/05-mobile-round-end.png",
+    "/workspace/analysis/p2-prototype/shots/06-fallback-table.png",
+    "/workspace/analysis/p2-prototype/shots/inspiration-inspora.png"
   ],
   "checks": [
     {

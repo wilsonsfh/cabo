@@ -9,7 +9,7 @@
 | Product taste | A lone visitor starts against a bot; a friend joins by link; final-turn danger is understandable without a manual. |
 | Implementation/debugging | Two isolated browsers finish the same match; refreshing/retrying never duplicates a draw. |
 | Architecture | Show filtered wire payloads: unknown cards never cross the boundary. Face-down CSS proves nothing. |
-| AI efficiency | Give Manus rules/invariants before UI; one deterministic engine powers tests, server and bot harness. |
+| AI efficiency | Give Client rules/invariants before UI; one deterministic engine powers tests, server and bot harness. |
 | Planning/scope | Join → start → play → score → rematch precedes shaders/art. One signature effect. |
 | Boundaries/security | Explain Spy disclosures, seat authority, bot limits, hosting costs and imperfect anti-cheat/naming clearance. |
 
@@ -90,14 +90,14 @@ Use `ctx.acceptWebSocket`, `webSocketMessage`, and attachments for seat/epoch id
 
 | Alternative | Judgment |
 | --- | --- |
-| Manus Game + Cloud Computer + Node `ws` | Best integrated managed-Game route. Current setup chooses Godot for 2D, Three.js for 3D; DOM is not automatically its 2D template. Reuse authoritative connection/server components, not Pong physics. Multiplayer computer selection is required. [13] |
+| Client Game + Cloud Computer + Node `ws` | Best integrated managed-Game route. Current setup chooses Godot for 2D, Three.js for 3D; DOM is not automatically its 2D template. Reuse authoritative connection/server components, not Pong physics. Multiplayer computer selection is required. [13] |
 | Managed web + Reserved Node `ws` | Viable approved DOM route. Default Autoscale can split in-memory rooms. Reserved gives one persistent 1 vCPU/512 MB process: usage-based up to $37.50/month full-utilization compute, less $10 credits, plus egress. Local skill pricing, not live quote; persist in database, not ephemeral files. |
 | Colyseus | Useful at matchmaking/multiple-room scale; schema visibility lifecycle outweighs filtered JSON’s auditability here. [10] |
 | PartyServer | Valid modern DO wrapper; direct DO uses fewer abstractions. Hosted PartyKit is rejected. [12] |
 | Local Node `ws` | Excellent test adapter, not lasting hosting when Wilson’s laptop sleeps. [14] |
 | Canvas/Three.js | Canvas complicates text/focus/hit tests; Three.js adds raycasts/textures/context failures without increasing fun. Reject for cards. |
 
-SQLite DOs now support Workers Free, with limits rather than unlimited hosting. [15] Choose Cloudflare only with deploy access and explicit hosting/engine agreement; do not silently bypass managed Game setup. Optional [Cloud Computer purchase](https://manus.im/app#settings/my-computer/create) starts at $10/month in the local reference; an owned computer can be attached instead. It also needs TLS/WSS, firewall/proxy checks and reboot-safe service management.
+SQLite DOs now support Workers Free, with limits rather than unlimited hosting. [15] Choose Cloudflare only with deploy access and explicit hosting/engine agreement; do not silently bypass managed Game setup. Optional [Cloud Computer purchase](about:blank) starts at $10/month in the local reference; an owned computer can be attached instead. It also needs TLS/WSS, firewall/proxy checks and reboot-safe service management.
 
 ## 5. Interaction and visual design
 
@@ -158,13 +158,13 @@ Apply `build-principles` thin slices and `poteto-agent-code-quality` cheapest-la
 
 90-second live script: 0–10 join from two isolated browsers; 10–20 ready/deal/private look; 20–45 play first hand with draw/swap/call; 45–70 accelerate remaining hands through legal early calls, skipping optional replays; 70–85 winner/Receipt; 85–90 rematch. Explain that early calls shorten this demonstration, not normal strategy. If timing slips, edit a real full-match recording rather than fake completion. Save wire payload/test evidence separately from pretty footage.
 
-## 8. Manus leverage
+## 8. Client leverage
 
 Parent-only: `webdev-mcp` initializes/previews/checkpoints/publishes after the explicit custom-web versus managed-Game decision. Managed Game uses `generic-multiplayer` and saved Cloud Computer selection; do not initialize merely to expose a purchase panel. Browser Operator/desktop-in-app-browser tests two identities and records actual outcomes. Video Editor assembles the 15-second beat from real capture.
 
 Skills: `webdev`/`webdev-worklocally` for authorized setup; Durable Objects/Workers best practices for generated binding types, current compatibility date, server-only secrets, awaited durable writes and private source maps; build-principles/poteto for checks before parallelizing UI/art. No runtime LLM is required. [20]
 
-`game-asset-catalog` offers `webdev.search_game_assets`/`access_game_assets`, metadata and selective retrieval after init/approval. Under **everything original**, do not reuse catalog sprites, fonts or SFX; reuse template networking/code patterns, not art. If Wilson later relaxes that restriction, preserve asset-specific licences/notices and never promise risk-free clearance. Original generated visual assets can use parent `manus-tools` only within approved sourcing scope; WebAudio avoids music-credit dependence.
+`game-asset-catalog` offers `webdev.search_game_assets`/`access_game_assets`, metadata and selective retrieval after init/approval. Under **everything original**, do not reuse catalog sprites, fonts or SFX; reuse template networking/code patterns, not art. If Wilson later relaxes that restriction, preserve asset-specific licences/notices and never promise risk-free clearance. Original generated visual assets can use parent `client-tools` only within approved sourcing scope; WebAudio avoids music-credit dependence.
 
 ## 9. Socratic probe set
 
@@ -204,7 +204,7 @@ Confidence: high on rules reconciliation/filtered architecture; medium on 90-min
 [10]: https://docs.colyseus.io/state/view "Colyseus StateView visibility"
 [11]: https://developers.cloudflare.com/durable-objects/best-practices/websockets/ "Cloudflare WebSocket hibernation"
 [12]: https://docs.partykit.io/guides/migrate-to-partyserver/ "PartyKit shutdown and PartyServer migration"
-[13]: https://manus.im/blog/introducing-manus-2-0 "Official Manus 2.0 capabilities"
+[13]: about:blank "Official Client 2.0 capabilities"
 [14]: https://github.com/websockets/ws "Node ws documentation"
 [15]: https://developers.cloudflare.com/durable-objects/platform/pricing/ "Current Durable Objects pricing"
 [16]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices "WebAudio best practices"

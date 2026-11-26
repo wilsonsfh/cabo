@@ -6,7 +6,7 @@ Task submitted (ID: video-analysis-55e7f055-5528-4ad9-9eb7-dec6e5c7e2a4)
 [36s] Status: Analysis completed
 [36s] Analysis completed!
 Full analysis result saved to: /home/ubuntu/AI-round/video_q2-environment-2252_analysis_20261125_150504.md
-Note: This tool performs AI-based visual and audio analysis, not verbatim transcription. For detailed speech transcription, use `manus-speech-to-text` instead.
+Note: This tool performs AI-based visual and audio analysis, not verbatim transcription. For detailed speech transcription, use `client-speech-to-text` instead.
 Analysis result:
 
 Here is a breakdown of the scene, tailored for recreating it as a lightweight, hand-drawn SVG background for a poker game. 
