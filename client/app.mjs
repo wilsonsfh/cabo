@@ -17,7 +17,7 @@ function name(id){return room?.names?.[id]||(id===view?.viewer?'You':'Friend');}
 function nameInput(){return $('name').value.trim()||'You';}
 function settings(){ $('sound').textContent=sound.enabled?'Sound on':'Sound off';$('sound').setAttribute('aria-pressed',String(sound.enabled));$('motion').textContent=reduceMotion()?'Less motion on':'Less motion';$('motion').setAttribute('aria-pressed',String(reduceMotion()));document.body.classList.toggle('reduce-motion',reduceMotion());scene.setReduced(reduceMotion()); }
 function updateRulesCopy(){
-  const rules=$('rules');
+  const rules=$('rules-content');
   rules.querySelector('ol').innerHTML='<li><strong>Draw or call.</strong> Draw privately from the deck only. The discard pile is for discarding, never drawing. Calling uses your turn and gives your friend one final turn.</li><li><strong>Exchange or discard.</strong> Replace one of your cards, or several matching values. Discarding a drawn 7/8, 9/10, J or Q opens a 2.5-second stacking window; its power starts if no one stacks. Exchanging it into your hand never does.</li><li><strong>Keep it low.</strong> A = 1, numbers = their number, J = 11, Q = 12. Red K = −1; black K = 13.</li>';
   const paragraphs=rules.querySelectorAll(':scope > p');
   paragraphs[1].textContent='Jack: after the stacking window, the acting player must perform a mandatory blind swap of one own and one opponent card. Skip is available only when no legal pair exists.';
@@ -33,8 +33,27 @@ $('motion').onclick=()=>{userReduced=!userReduced;localStorage.setItem('callit-r
 preference.addEventListener('change',settings);settings();
 document.addEventListener('pointerdown',()=>{instant=false;document.body.classList.remove('keyboard-action');sound.unlock();},{passive:true});
 $('name').value=localStorage.getItem('callit-name')||'';
-function openRules(){$('rules').showModal();}
-$('rules-open').onclick=openRules;$('rules-footer').onclick=openRules;$('rules-close').onclick=()=>$('rules').close();$('rules-play').onclick=()=>$('rules').close();
+const guide=$('rules'), grip=$('rules-drag');
+let guideOpener=null, drag=null;
+function placeGuide(x,y){
+  const rect=guide.getBoundingClientRect();
+  guide.style.left=`${Math.max(8,Math.min(x,innerWidth-rect.width-8))}px`;
+  guide.style.top=`${Math.max(8,Math.min(y,innerHeight-rect.height-8))}px`;
+  guide.style.right='auto';
+}
+function openRules(){guideOpener=document.activeElement;if(!guide.open)guide.show();}
+function closeRules(){const restore=guide.contains(document.activeElement);guide.close();if(restore)guideOpener?.focus();}
+for(const tab of [$('rules-tab'),$('pip-tab')]){
+  tab.onclick=()=>{for(const item of [$('rules-tab'),$('pip-tab')]){const active=item===tab;item.setAttribute('aria-selected',String(active));item.tabIndex=active?0:-1;$(item.getAttribute('aria-controls')).hidden=!active;}guide.querySelector('.guide-body').scrollTop=0;};
+  tab.onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();e.stopPropagation();const next=e.key==='Home'?$('rules-tab'):e.key==='End'?$('pip-tab'):tab===$('rules-tab')?$('pip-tab'):$('rules-tab');next.click();next.focus();}};
+}
+grip.onpointerdown=e=>{if(e.button!==0)return;const rect=guide.getBoundingClientRect();drag={id:e.pointerId,x:e.clientX-rect.left,y:e.clientY-rect.top};grip.setPointerCapture(e.pointerId);};
+grip.onpointermove=e=>{if(drag?.id===e.pointerId)placeGuide(e.clientX-drag.x,e.clientY-drag.y);};
+grip.onpointerup=grip.onpointercancel=()=>{drag=null;};
+grip.onkeydown=e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home'].includes(e.key))return;e.preventDefault();e.stopPropagation();if(e.key==='Home'){guide.style.left='';guide.style.top='';guide.style.right='';return;}const rect=guide.getBoundingClientRect(),step=e.shiftKey?4:24;placeGuide(rect.left+(e.key==='ArrowLeft'?-step:e.key==='ArrowRight'?step:0),rect.top+(e.key==='ArrowUp'?-step:e.key==='ArrowDown'?step:0));};
+window.addEventListener('resize',()=>{if(guide.open){const rect=guide.getBoundingClientRect();placeGuide(rect.left,rect.top);}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&guide.open){e.preventDefault();closeRules();}});
+$('rules-open').onclick=openRules;$('rules-footer').onclick=openRules;$('rules-close').onclick=closeRules;$('rules-play').onclick=closeRules;
 function goLobby(){
   if(adapter&&view&&!['gameEnd','roundEnd'].includes(view.phase)&&!confirm('Leave this table? Solo progress ends. Online seats can reconnect for 30 seconds.'))return;
   adapter?.close();scene.close();adapter=null;view=null;room=null;session=null;selected=[];multi=false;lastChat='';$('lobby').hidden=false;$('table-ui').hidden=true;window.scrollTo({top:0,behavior:'instant'});
@@ -168,7 +187,8 @@ function showResults(forfeit=false){
   const waiting=ended?room.rematchReady?.includes(view.viewer):view.roundReady.includes(view.viewer);$('result-action').replaceChildren(button(waiting?'Waiting for your friend…':ended?'One more match ↗':'Next round →',()=>ended?adapter.rematch():act({type:'nextRound'}),'primary',waiting));
 }
 document.addEventListener('keydown',e=>{
-  if(/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)||e.target.isContentEditable||e.metaKey||e.ctrlKey||e.altKey||$('rules').open)return;
+  if(guide.contains(e.target)&&['Enter',' '].includes(e.key))return;
+  if(/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)||e.target.isContentEditable||e.metaKey||e.ctrlKey||e.altKey)return;
   instant=true;document.body.classList.add('keyboard-action');if(!view)return;const k=e.key.toLowerCase();
   if(/^Digit[1-9]$/.test(e.code)){e.preventDefault();pick(`hand:${e.shiftKey?view.players.find(p=>p!==view.viewer):view.viewer}:${Number(e.code.slice(-1))-1}`,true);}
   else if(room.status!=='paused'){

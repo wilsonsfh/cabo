@@ -110,7 +110,7 @@ export function startServer({ port = Number(process.env.PORT) || 8787, host = pr
   });
   const heartbeat = setInterval(() => { for (const ws of wss.clients) { if (!ws.alive) { ws.terminate(); continue; } ws.alive = false; ws.ping(); } }, 15000);
   const cleanup = setInterval(() => { for (const [code, room] of rooms) if (Date.now() - room.updated > 1800000 && room.seats.every(s => !s.ws)) { room.seats.forEach(s => clearTimeout(s.timer)); rooms.delete(code); } }, 60000);
-  server.listen(port, host, () => console.log(`LOWKEY listening at http://${host}:${server.address().port}`));
+  server.listen(port, host, () => console.log(`CABO listening at http://${host}:${server.address().port}`));
   return { server, rooms, close: () => new Promise(resolve => { clearInterval(heartbeat); clearInterval(cleanup); for (const room of rooms.values()) room.seats.forEach(s => clearTimeout(s.timer)); for (const ws of wss.clients) ws.terminate(); wss.close(); server.close(resolve); }) };
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) startServer();

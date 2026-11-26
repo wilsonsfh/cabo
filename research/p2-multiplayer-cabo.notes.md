@@ -67,6 +67,6 @@ Canonical shipped profile is **2019 Bezier hand rules + disclosed Arcade Four se
 
 Primary recommendation is custom DOM/React/GSAP + same-origin Cloudflare Worker/SQLite Durable Object **only after explicit hosting/engine choice and deploy access**. Managed Client Game is the integrated alternative with current Godot-2D/Three.js-3D engine rules and saved Cloud Computer selection. Do not silently initialize a DOM web project as an engine Game or buy a VM. Hosted PartyKit is unavailable; PartyServer is the supported successor option.
 
-No product was built, packages installed, GUI actions performed, or deployment/purchase made. Inspora source inspection is not visual playback; the report states this limit. Copyright/trademark guidance was opened; no LOWKEY or CABO clearance is claimed. All original art/audio remains binding; catalog artwork reuse is not recommended under that restriction.
+No product was built, packages installed, GUI actions performed, or deployment/purchase made. Inspora source inspection is not visual playback; the report states this limit. Copyright/trademark guidance was opened; no CABO or CABO clearance is claimed. All original art/audio remains binding; catalog artwork reuse is not recommended under that restriction.
 
 Final differentiator: Reveal Receipt, a six-second post-hand replay of the decisive blind swap with caller totals before/after, released only after resolution and without revealing the undrawn deck.

@@ -17,7 +17,10 @@ async function connect(command) {
       c.message = m; c.updates++;
       if (m.view) {
         const state = app.rooms.get(m.room.code).state;
-        assert.deepEqual(m.view, viewFor(state, c.session.playerId));
+        // Eligibility is sampled when sent; the stack deadline may pass in transit.
+        const sampledAt = m.view.stackAllowed && state.pendingPower
+          ? Math.min(Date.now(), state.pendingPower.deadline - 1) : Date.now();
+        assert.deepEqual(m.view, viewFor(state, c.session.playerId, sampledAt));
         const wire = data.toString(); assert.equal('deck' in m.view, false); assert.equal('rng' in m.view, false);
         assert.equal(wire.includes(c.session.token), false);
         for (const card of [...state.deck, ...state.discard, ...state.players.flatMap(p => state.hands[p].filter(Boolean)), ...(state.held ? [state.held.card] : [])]) assert.equal(wire.includes(card.id), false);

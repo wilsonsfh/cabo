@@ -39,4 +39,4 @@ Seen via contact sheet `analysis/_inspo/train-contact.png` (not a full playback)
 - Every graphic must reflect its own product; no generic or stock images; refinement pass, not a redesign.
 - Renames: Q1 Mouthpiece, Q2 Cabo, Q5 Terminal Boss, Q6 Glassbox.
 - Keep the raw monitor on :4777; restyle dashboard/public to the Hub design kit via a Sandbox sub-agent, low priority.
-- Q8 storyboard draft (Coordinator, `_reference/q5-train/coordinator/Q8-STORYBOARD.md`): voice (Q1) -> terminal MCP (Q5) -> Cabo game + celebration (Q2) -> Architecture Magic (Q7) -> TRACE flight (Q4) -> clouds -> Glassbox (Q6); anchor humans&.
+- Q8 storyboard draft (Coordinator, `_reference/q5-train/coordinator/Q8-STORYBOARD.md`): voice (Q1) -> terminal MCP (Q5) -> Cabo game + celebration (Q2) -> Architecture Relive (Q7) -> TRACE flight (Q4) -> clouds -> Glassbox (Q6); anchor humans&.

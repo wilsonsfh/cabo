@@ -1,4 +1,4 @@
-# LOWKEY — Pocket Island
+# cabo
 
 A playable original 3D CABO-family game for two people. A pure deterministic engine powers both a local memory bot and a real authoritative WebSocket room. Three.js adds a warm toy-diorama, while native DOM controls keep the click-to-act cadence and accessibility of a 2D game.
 
@@ -96,6 +96,6 @@ This deliverable is the explicitly requested local prototype folder, not an init
 
 ## Design and IP
 
-The analyst's recommended **LOWKEY** working name is adopted; its trademark clearance is **unverified**. Pocket Island is the edition concept. CABO-family is descriptive compatibility text, not a claim of affiliation or permission. All creatures, foliage, card back design, prose and sounds are original. No Nintendo characters, mushrooms, pipes, logos, sprites, fonts, recordings or music are present. Third-party code notices are retained in `client/vendor/`; GSAP uses its standard license, not MIT.
+The analyst's recommended **Cabo** working name is adopted; its trademark clearance is **unverified**. Pocket Island is the edition concept. CABO-family is descriptive compatibility text, not a claim of affiliation or permission. All creatures, foliage, card back design, prose and sounds are original. No Nintendo characters, mushrooms, pipes, logos, sprites, fonts, recordings or music are present. Third-party code notices are retained in `client/vendor/`; GSAP uses its standard license, not MIT.
 
 Read [FEATURE-MAP.md](FEATURE-MAP.md), [STATECHART.md](STATECHART.md), [DESIGN-REVIEW.md](DESIGN-REVIEW.md), and [PROGRESS.md](PROGRESS.md) for the product map, phases, exact motion choices, review findings and build checkpoints.

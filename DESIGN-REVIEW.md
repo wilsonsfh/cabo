@@ -1,4 +1,4 @@
-# LOWKEY: design, motion and verification review
+# CABO: design, motion and verification review
 
 The thesis is **a toy-sized island for a very readable memory game**. Three-dimensional character bodies make private information feel like meeting a little inhabitant, while the cards stay in fixed numbered slots and every action has a native button. No camera tour, drag mechanic, cinematic interstitial or animation promise controls game state.
 

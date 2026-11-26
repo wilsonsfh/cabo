@@ -49,3 +49,21 @@ body.reduce-motion .card-slot:not(:disabled):hover{transform:none}
 .key-combo{display:inline-flex;align-items:center;gap:5px}
 .shortcut-note{margin:13px 0 0;color:var(--muted);font-size:12px}
 @media(prefers-color-scheme:dark){.keyboard-help kbd{background:var(--paper)}}
+
+/* Utility copy shares the shortcut guide's sans face. */
+.match-bar,.eyebrow,.mono,.slot-label,.pile-label,.score,.seat span:not(.avatar),.empty-slot,.invite-code,.score-row b,.score-row small,.wordmark .edition,.lobby-foot{font-family:var(--sans)}
+.match-bar{letter-spacing:.015em}
+#rules{position:fixed;inset:88px 24px auto auto;margin:0;z-index:60;width:440px;max-width:calc(100vw - 24px);height:auto;max-height:calc(100svh - 104px);padding:20px;overflow:hidden;box-shadow:0 12px 36px #202d372e}
+#rules[open]{display:flex;flex-direction:column}
+#rules .dialog-head{flex:none}
+.rules-grip{font:500 13px var(--sans);color:var(--muted);cursor:grab;touch-action:none;user-select:none;padding:6px 10px}
+.rules-grip:active{cursor:grabbing;transform:none!important}
+.guide-tabs{display:flex;gap:16px;border-bottom:1px solid var(--line);flex:none;margin:8px 0 0}
+.guide-tabs button{font-size:14px;padding:10px 0;color:var(--muted);border-bottom:2px solid transparent}
+.guide-tabs [aria-selected=true]{color:var(--ink);border-color:var(--ink);font-weight:650}
+.guide-body{min-height:0;overflow:auto;overscroll-behavior:contain;padding-right:8px}
+#rules h2{font-size:38px;margin:24px 0 18px}
+#rules h3{font-size:17px;line-height:1.35;margin:24px 0 8px}
+#rules p,#rules li{font-size:15px;line-height:1.55}
+#rules .primary{flex:none;margin-top:16px;min-height:48px;padding:12px;font-size:16px}
+@media(max-width:600px){#rules{top:80px;right:12px;padding:14px;max-height:46svh}#rules h2{font-size:30px;margin:18px 0 12px}.guide-tabs{gap:20px}}

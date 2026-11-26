@@ -1,4 +1,4 @@
-# LOWKEY — corrected two-player CABO rules
+# CABO — corrected two-player CABO rules
 
 **Current implementation: 26 November 2026, 00:04 +08.** This is a local two-player prototype implementing Wilson's requested rules, not an official publisher edition. No Jokers, no Kamikaze, and no additional game mechanics.
 

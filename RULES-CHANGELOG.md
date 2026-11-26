@@ -30,7 +30,7 @@ The initial socket and browser harness defects were corrected (time-dependent vi
 
 ## Historical correction record (superseded)
 
-# LOWKEY rules correction — 25 November 2026
+# CABO rules correction — 25 November 2026
 
 ## Before / after
 

@@ -1,4 +1,4 @@
-# LOWKEY — Pocket Island: player feature map
+# CABO — Pocket Island: player feature map
 
 ## Find a table
 

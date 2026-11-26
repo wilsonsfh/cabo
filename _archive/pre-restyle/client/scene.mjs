@@ -53,7 +53,7 @@ function cardTexture(value) {
   if (value === null) {
     x.fillStyle = '#f5cf65'; x.beginPath(); x.moveTo(128, 87); x.lineTo(197, 172); x.lineTo(128, 257); x.lineTo(59, 172); x.closePath(); x.fill();
     x.fillStyle = '#243d60'; x.fillRect(100, 154, 14, 20); x.fillRect(142, 154, 14, 20); x.fillRect(113, 196, 30, 7);
-    x.fillStyle = '#bed0d9'; x.font = 'bold 17px monospace'; x.textAlign = 'center'; x.fillText('LOWKEY', 128, 305);
+    x.fillStyle = '#bed0d9'; x.font = 'bold 17px monospace'; x.textAlign = 'center'; x.fillText('CABO', 128, 305);
   } else {
     x.fillStyle = '#243243'; x.font = '900 57px sans-serif'; x.textAlign = 'left'; x.fillText(String(value), 25, 70);
     x.fillStyle = CAST[value][1]; x.fillRect(32, 97, 192, 170);

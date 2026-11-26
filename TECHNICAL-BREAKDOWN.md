@@ -1,6 +1,6 @@
 # P2 — Cabo: technical breakdown
 
-**Rename note:** Cabo, formerly LOWKEY, follows Wilson's 23:21 directive. Current title, metadata and wordmark use Cabo; some internal identifiers and older owner records retain the earlier brand. [^final-style] [^entry] [^package]
+**Rename note:** Cabo, formerly CABO, follows Wilson's 23:21 directive. Current title, metadata and wordmark use Cabo; some internal identifiers and older owner records retain the earlier brand. [^final-style] [^entry] [^package]
 
 ## 1. Scope and implementation status
 
@@ -38,7 +38,7 @@ Times are the +08 chat times supplied to this refresh; saved files support the r
 
 | Directive time | Consequence and evidence | Status label |
 | --- | --- | --- |
-| 21:5x, then 22:21 | Earlier Q2 benchmark replaced by Q7/Architecture Magic scale/craft, not its identity. [^cloud] [^final-style] | IMPLEMENTED |
+| 21:5x, then 22:21 | Earlier Q2 benchmark replaced by Q7/Architecture Relive scale/craft, not its identity. [^cloud] [^final-style] | IMPLEMENTED |
 | 22:00 / 22:17 | Recognisable poker cards with powers; final standard deck/King/J/Q semantics, no Jokers/Kamikaze. [^items] [^rules] [^cards] | IMPLEMENTED |
 | 22:18 | Unfold hand-drawn SVG direction replaces earlier 3D runtime. [^cloud] [^final-style] [^vendor] | IMPLEMENTED |
 | 22:41 | Hub-v3 kit informs large actions, competing-choice hover fade and under-word highlights. [^final-style] | IMPLEMENTED |

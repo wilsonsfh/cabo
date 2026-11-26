@@ -1,6 +1,6 @@
 # P2 — Cabo: design rationale
 
-**Rename note:** Cabo, formerly LOWKEY, follows Wilson's 23:21 directive; title, wordmark and refreshed captures use Cabo. [^final-style]
+**Rename note:** Cabo, formerly CABO, follows Wilson's 23:21 directive; title, wordmark and refreshed captures use Cabo. [^final-style]
 
 ## 1. Summary and evidence boundary
 

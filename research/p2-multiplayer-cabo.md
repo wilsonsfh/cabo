@@ -1,8 +1,8 @@
-# Problem 2 — LOWKEY: a networked CABO-family arcade table
+# Problem 2 — CABO: a networked CABO-family arcade table
 
 ## 1. What a top-scoring answer looks like
 
-**Build a readable DOM table, an authoritative room server, an honest bot, and one outstanding reveal—not a local animation pretending to be multiplayer.** Estimate 90 minutes to a complete two-player loop and 165–210 minutes to a defensible published demo, assuming deploy access. LOWKEY is an uncleared working title. Priority: high showcase value, but build first only if hosting is settled; otherwise finish a lower-risk loop first.
+**Build a readable DOM table, an authoritative room server, an honest bot, and one outstanding reveal—not a local animation pretending to be multiplayer.** Estimate 90 minutes to a complete two-player loop and 165–210 minutes to a defensible published demo, assuming deploy access. CABO is an uncleared working title. Priority: high showcase value, but build first only if hosting is settled; otherwise finish a lower-risk loop first.
 
 | Assessment dimension | Grader’s proof |
 | --- | --- |
@@ -184,7 +184,7 @@ Two adversarial probes: (5) “Our server bot only uses legal moves”—why doe
 
 ## 10. Open questions, confidence and recommendation
 
-Ask at most three: Does Wilson prefer approved DOM/Cloudflare or integrated Game/paid computer? Is “Arcade Four” acceptable versus full >100 play? Is LOWKEY merely a working title pending clearance?
+Ask at most three: Does Wilson prefer approved DOM/Cloudflare or integrated Game/paid computer? Is “Arcade Four” acceptable versus full >100 play? Is CABO merely a working title pending clearance?
 
 Confidence: high on rules reconciliation/filtered architecture; medium on 90-minute timing until hosting is tested; medium on Inspora’s perceived motion because source inspection was not GUI playback; no trademark-clearance confidence.
 

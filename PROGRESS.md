@@ -44,7 +44,7 @@ A second driver launched two independent tabs, used the real Create/Join/Start c
 
 Screenshot review found disabled-label CSS specificity removing the translate anchor, plus long card names overlapping and mobile results covering the hand. Fixes preserve anchors, shorten labels without removing accessible names, reserve mobile reveal space and remove a square tabletop overhang. Re-shoot follows. AA contrast measured: ink/sky 10.98:1; secondary/sky 5.32:1; white/blue 6.82:1; white/coral 5.14:1; secondary/paper 5.71:1. All measured enabled native controls >=44x44px at desktop; mobile to be rechecked.
 
-Final analyst report is available. Adopt its **LOWKEY** uncleared working title (Pocket Island edition); keep CABO-family descriptive only. Align Quick to exactly four rounds, no exact-100 reset and no >100 early termination; Classic retains official 100-point rules. Add a regression test. The analyst's DOM-only recommendation is intentionally superseded by the user's explicit Three.js direction; native DOM remains the accessible interaction layer.
+Final analyst report is available. Adopt its **CABO** uncleared working title (Pocket Island edition); keep CABO-family descriptive only. Align Quick to exactly four rounds, no exact-100 reset and no >100 early termination; Classic retains official 100-point rules. Add a regression test. The analyst's DOM-only recommendation is intentionally superseded by the user's explicit Three.js direction; native DOM remains the accessible interaction layer.
 
 ## Final verification checkpoint
 

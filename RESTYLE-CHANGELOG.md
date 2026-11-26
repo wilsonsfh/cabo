@@ -1,4 +1,4 @@
-# LOWKEY restyle and Wilson rules — 2026-11-25
+# CABO restyle and Wilson rules — 2026-11-25
 
 ## Scope and working decisions
 
@@ -12,7 +12,7 @@ Read `build-principles`, `poteto-agent-code-quality`, the adapted Socratic build
 
 Read Nave's `DESIGN-RATIONALE.md` section 12 and its `style.css`, `index.html`, `app.js`, `plates.js`, `nave.js`; inspected local font inventory. Borrowed confident system typography, generous spacing, large pill actions, restrained stroke illustrations, not architectural identity. Read Unfold's `sketch.ts`, `paperMaterial.ts`, `fold.ts`: adapted seeded wobble, hatch lines, translucent wash and small page-like reveals into SVG/DOM, not its 3D implementation.
 
-Searched for Inspora and Superlist, fetched both, then visited both first-hand using locked headless Chromium. Evidence: `tests/evidence/reference-study.json`, `shots/reference-inspora.png`, `shots/reference-superlist.png`. Inspora's gallery loaded partly (several thumbnails remained placeholders); I used it to confirm Superlist is featured, not to claim review of every featured site. Superlist's actual home shows heavy tight heading, generous surrounding space and one strong action; that hierarchy informs LOWKEY's lobby. No downloaded illustration/photo assets are used. Poker artwork is original procedural SVG.
+Searched for Inspora and Superlist, fetched both, then visited both first-hand using locked headless Chromium. Evidence: `tests/evidence/reference-study.json`, `shots/reference-inspora.png`, `shots/reference-superlist.png`. Inspora's gallery loaded partly (several thumbnails remained placeholders); I used it to confirm Superlist is featured, not to claim review of every featured site. Superlist's actual home shows heavy tight heading, generous surrounding space and one strong action; that hierarchy informs CABO's lobby. No downloaded illustration/photo assets are used. Poker artwork is original procedural SVG.
 
 Local Caveat WOFF2 500/700 copied from the supplied Nave font folder, used only for handwritten annotations. OFL license obtained from https://raw.githubusercontent.com/google/fonts/main/ofl/caveat/OFL.txt and bundled next to the files. System SF stack requires no SF font distribution. Existing Three.js and GSAP vendor files are preserved; new main card renderer will not depend on a GPU or bitmap textures.
 
@@ -45,7 +45,7 @@ Clean screenshots are in `shots/restyle-*.png`: six light/dark lobby and table v
 
 ## Hub-v3 follow-up actually used
 
-At 22:47 +08 read the newly transferred `/home/ubuntu/AI-round/_reference/hub-v3/visualization/DESIGN-KIT.md`. This was a code-derived design kit, not a first-hand visit by me to the Mac Hub. Applied its competing-choice hover fade and under-word highlight only to LOWKEY's two lobby actions, plus the Options menu; all hover is gated by `(hover:hover) and (pointer:fine)`. Primary lobby actions are >=60px, turn actions and chat send targets >=56px. Added a small double-stroked hand-drawn diamond wordmark. Kept LOWKEY's navy/ivory poker identity and heavy system headline rather than copying the Hub's serif. No Hub URLs or assets are imported, and no claim is made that I inspected Hub source files beyond the short kit.
+At 22:47 +08 read the newly transferred `/home/ubuntu/AI-round/_reference/hub-v3/visualization/DESIGN-KIT.md`. This was a code-derived design kit, not a first-hand visit by me to the Mac Hub. Applied its competing-choice hover fade and under-word highlight only to CABO's two lobby actions, plus the Options menu; all hover is gated by `(hover:hover) and (pointer:fine)`. Primary lobby actions are >=60px, turn actions and chat send targets >=56px. Added a small double-stroked hand-drawn diamond wordmark. Kept CABO's navy/ivory poker identity and heavy system headline rather than copying the Hub's serif. No Hub URLs or assets are imported, and no claim is made that I inspected Hub source files beyond the short kit.
 
 ## Concrete defects found and fixed
 
@@ -81,7 +81,7 @@ Owned source files changed: `client/environment.mjs`, `client/env.css`, `client/
 
 ### Cabo rename — 23:25 +08
 
-The product is now **Cabo, formerly LOWKEY**, per Wilson's 23:21 request relayed by the lead at 23:23. Updated the permitted `client/index.html` document title, visible wordmark and its accessible name to Cabo. Removed the old name from the owned celebration replay's visible copy and updated the environment module's product comment. Historical notes and stable seed identifiers remain unchanged so procedural drawings do not jump simply because the name changed. The lobby's “Four cards. One bold call.” copy remains applicable; no share text in the owned modules names the old product. The head meta-description still says LOWKEY because the lead permitted only title/wordmark changes in index.html; it is explicitly handed back to the lead for metadata cleanup. No rule text, engine, app, transport, server or test source was edited for the rename. Refreshed captures will show Cabo.
+The product is now **Cabo, formerly CABO**, per Wilson's 23:21 request relayed by the lead at 23:23. Updated the permitted `client/index.html` document title, visible wordmark and its accessible name to Cabo. Removed the old name from the owned celebration replay's visible copy and updated the environment module's product comment. Historical notes and stable seed identifiers remain unchanged so procedural drawings do not jump simply because the name changed. The lobby's “Four cards. One bold call.” copy remains applicable; no share text in the owned modules names the old product. The head meta-description still says CABO because the lead permitted only title/wordmark changes in index.html; it is explicitly handed back to the lead for metadata cleanup. No rule text, engine, app, transport, server or test source was edited for the rename. Refreshed captures will show Cabo.
 
 ### Additional software motion sample — 23:32 +08
 
@@ -101,4 +101,4 @@ The final 240-frame idle-table comparison recorded static mean **16.666ms**, p95
 
 The final **24 owned responsive/call/celebration captures** were refreshed after the Cabo rename and power footer refinement; viewed the final desktop celebration, mobile dark table and mobile dark celebration personally. Indices, avatars and the raised discard remain unobstructed, and the environment never intercepts input. Capture manifests/checks are in `shots/environment-checks.json`. Promo replay: `/?demo=celebrate` or `/?demo=celebrate&seed=2252`; wait for `body[data-celebration-ready="true"]`, then ~700ms for a burst frame or ~4 seconds for the calm sunny settle. No debug overlay is shown. Reload replays it.
 
-Lead follow-up: the index meta-description retains LOWKEY because the authorized index edit was title/wordmark-only; update that metadata if desired. The visible title/wordmark/captures say Cabo. No rules-owned source/test files, server CSP, `DESIGN-RATIONALE.md` or `TECHNICAL-BREAKDOWN.md` were changed.
+Lead follow-up: the index meta-description retains CABO because the authorized index edit was title/wordmark-only; update that metadata if desired. The visible title/wordmark/captures say Cabo. No rules-owned source/test files, server CSP, `DESIGN-RATIONALE.md` or `TECHNICAL-BREAKDOWN.md` were changed.
