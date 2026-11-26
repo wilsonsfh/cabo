@@ -56,3 +56,12 @@ The engine suite covers the exact deck and opaque IDs, both King scores, deadlin
 This is a **prototype**, not an audited secure game service. The server knows the entire deck. A hostile host can cheat; solo authority runs locally. Filtered views prevent the other client from receiving hidden rank/suit/value/IDs. A modified client can retain legitimately learned values. The seeded shuffle is deterministic, not cryptographic fairness. No accounts, permanent storage, public deployment, TLS/WSS, matchmaking, 3+ players, ranked anti-cheat, action-ID receipts, localization or physical-device Safari certification are claimed.
 
 Restarting clears rooms/chat; disconnected online seats have 30 seconds to reconnect with their stored token. Brand clearance and official CABO affiliation are not claimed. No SF font files, publisher artwork or downloaded drawing assets are used. See [VENDOR.md](VENDOR.md) for dependency/font provenance. Previous source and verification records are preserved in `_archive/pre-restyle/`; historical screenshots without `restyle-` are not evidence of the new interface.
+
+
+## Cloudflare hosting
+
+Live: https://cabo.wilsonsoon.workers.dev
+
+The public app uses a native Cloudflare Durable Object WebSocket adapter. Rooms remain ephemeral, matching the prototype; encryption/game logic stays in the original implementation. This remains an unaudited prototype.
+
+build browser assets with `node scripts/build-cloudflare.mjs`, then `wrangler deploy`. The original local Node server remains available.

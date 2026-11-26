@@ -4,3 +4,6 @@ node_modules*/
 .env
 .env.*
 !.env.example
+.cloudflare/
+.wrangler/
+node_modules/

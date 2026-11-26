@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developers.cloudflare.com/workers/wrangler/config-schema.json",
+  "name": "cabo",
+  "main": "cloudflare/worker.js",
+  "compatibility_date": "2026-11-24",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": true,
+  "assets": {
+    "directory": "./.cloudflare/site",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/ws"
+    ]
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "CABO_HUB",
+        "class_name": "CaboHub"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "CaboHub"
+      ]
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
