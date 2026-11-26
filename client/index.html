@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#eee8dc">
-  <meta name="description" content="Four hidden cards. One bold call. Cabo is a two-player prototype of the card game CABO with a hand-drawn poker deck.">
-  <title>Cabo — Four cards. One bold call.</title>
+  <meta name="description" content="Are your hands fast? Are you for the game? Cabo is a two-player prototype of the card game CABO with a hand-drawn poker deck.">
+  <title>Cabo — Are your hands fast? Are you for the game?</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23264e60'/%3E%3Cpath d='M32 10 49 32 32 54 15 32Z' fill='%23f5eddb'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/env.css">
@@ -21,7 +21,7 @@
     <section id="lobby" class="lobby">
       <div class="hero-copy">
         <p class="eyebrow">A GAME OF MEMORY & A LITTLE NERVE</p>
-        <h1>Four cards.<br>One <span class="underlined">bold</span> call.</h1>
+        <h1>Are your hands fast?<br>Are you for the <span class="underlined">game</span>?</h1>
         <p class="intro">Keep your score low.<br>Keep your secrets close.</p>
         <div class="play-panel">
           <div class="input-row"><label>Your name<input id="name" maxlength="32" placeholder="You" autocomplete="nickname"></label><label>Match<select id="mode"><option value="quick">Quick · 4 rounds</option><option value="standard">Classic · to 100</option></select></label></div>
@@ -53,7 +53,17 @@
             <div id="self-hand" class="hand" role="group" aria-label="Your cards"></div>
             <div class="player-row self-row"><div class="seat"><span class="avatar" aria-hidden="true">Y</span><div><strong id="self-name">You</strong><span>YOUR HAND</span></div></div><span id="self-score" class="score">0 total</span></div>
           </div>
-          <p class="keyboard-help">D draw · C call · 1–4 your cards · Shift + 1–4 theirs</p>
+          <aside class="keyboard-help" aria-label="Keyboard shortcuts">
+            <span class="shortcut-title">At your fingertips</span>
+            <ul class="shortcut-list">
+              <li><kbd>D</kbd><span>Draw</span></li>
+              <li><kbd>X</kbd><span>Discard</span></li>
+              <li><kbd>C</kbd><span>Call</span></li>
+              <li><kbd>1–4</kbd><span>Your card / stack</span></li>
+              <li><span class="key-combo"><kbd>Shift</kbd><span aria-hidden="true">+</span><kbd>1–4</kbd></span><span>Their card</span></li>
+            </ul>
+            <p class="shortcut-note">Discarded powers activate automatically.</p>
+          </aside>
           <section class="chat" id="chat" aria-label="Table chat"><div class="chat-heading"><span class="eyebrow">TABLE TALK</span><span id="chat-note">For you and your friend</span></div><div id="chat-messages" class="chat-messages" role="log" aria-live="polite"></div><form id="chat-form"><input id="chat-input" maxlength="280" placeholder="A little table talk…" aria-label="Message your friend" autocomplete="off"><button id="chat-send" type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12 H19 M13 6 L19 12 13 18"/></svg></button></form></section>
         </div>
         <section id="results" class="results-card" hidden aria-labelledby="result-title"><p class="eyebrow" id="result-tag">ROUND COMPLETE</p><h2 id="result-title">Nice call.</h2><p id="result-subtitle"></p><div id="result-scores"></div><div id="result-action"></div></section>

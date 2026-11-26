@@ -26,7 +26,6 @@ function updateRulesCopy(){
   copy[0].textContent='Replace several own cards only if their score values match. A failed match exposes them and adds the draw; selecting three or four adds another unseen deck penalty card if available. Deck replacements stay hidden. Holes preserve the remaining card positions.';
   copy[1].textContent='Caller lowest or tied: 0 points; otherwise their sum +10. Everyone else scores their sum. No Jokers or Kamikaze. Quick is exactly four rounds. Classic ends above 100; exactly 100 resets to 50 once. Deck exhaustion ends a round after the current action resolves.';
   const stack=document.createElement('p');stack.textContent='Stack: after the other player discards, tap one own card to attempt the same rank. A match is revealed on the pile and leaves a hole, without changing turns. Stacking a power cancels the discarder’s power and gives it to you. A wrong rank adds one hidden deck penalty card. Power discards offer 2.5 seconds to stack, then close; late/ineligible attempts have no penalty. No stacking during an active power or private reveal. Ordinary windows close on the next draw or discard; non-power alternating chains remain allowed. These window/chain choices are provisional.';details.before(stack);
-  document.querySelector('.keyboard-help').textContent='D draw · X discard (powers automatic) · C call · 1–4 own card / stack · Shift + 1–4 theirs';
 }
 updateRulesCopy();
 $('sound').onclick=()=>{sound.toggle();sound.play('click');settings();};
